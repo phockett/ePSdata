@@ -25,10 +25,30 @@ git push --set-upstream origin gh-pages
 - Add master as submodule... doesn't work, gives
 git remote add https://github.com/phockett/ePSdata build/html
 
+This works:
+git remote add html https://github.com/phockett/ePSdata/build/html
+... but not sure that's the intention.
+
+
 
 - Setup Sphinx
 sphinx-quickstart
 
-Add nbsphinx extension to conf.py.
+Add nbsphinx extension to conf.py
+(plus settings - adapted from NBsphinx example docs:
+  #	https://nbsphinx.readthedocs.io/en/0.4.3/prolog-and-epilog.html
+  #	https://nbsphinx.readthedocs.io/en/0.4.3/conf.py
+  )
 
-- HTML conversion
+- Dir structure
+  -- build
+  -- source  
+    - index.rst
+    -- mol dirs with .ipynb docs.
+
+- Set index.rst with epsman/web/buildSphinxHTML.genSphinxIndex()
+Pulls in subdirs as sepearte toctrees.
+
+- HTML build (Bemo)
+conda activate webDev
+make html
