@@ -18,3 +18,17 @@ Setting up on Bemo. Mainly following simple guide: [Publishing Sphinx docs on Gi
 
 - Make gh-pages branch
 git checkout --orphan gh-pages
+git commit
+git push --set-upstream origin gh-pages
+
+
+- Add master as submodule... doesn't work, gives
+git remote add https://github.com/phockett/ePSdata build/html
+
+
+- Setup Sphinx
+sphinx-quickstart
+
+Add nbsphinx extension to conf.py.
+
+- HTML conversion
