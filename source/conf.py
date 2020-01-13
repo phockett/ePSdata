@@ -74,8 +74,9 @@ html_static_path = ['_static']
 # """
 
 # Prologue with badge
+# Some paths will need updating.
 nbsphinx_prolog = r"""
-{% set docname = 'doc/' + env.doc2path(env.docname, base=None) %}
+{% set docname = 'source/' + env.doc2path(env.docname, base=None) %}
 
 .. only:: html
 
@@ -84,7 +85,7 @@ nbsphinx_prolog = r"""
 
     .. nbinfo::
 
-        This page was generated from `{{ docname }}`__.
+        This page was generated from `{{ env.docname }}`__.
         Interactive online version:
         :raw-html:`<a href="https://mybinder.org/v2/gh/spatialaudio/nbsphinx/{{ env.config.release }}?filepath={{ docname }}"><img alt="Binder badge" src="https://mybinder.org/badge_logo.svg" style="vertical-align:text-bottom"></a>`
 
@@ -92,8 +93,7 @@ nbsphinx_prolog = r"""
 
         To cite this dataset [...]
 
-    __ https://github.com/phockett/ePSdata/blob/
-        {{ env.config.release }}/{{ docname }}
+    __ https://github.com/phockett/ePSdata/blob/gh-pages/{{ docname }}
 
 
 

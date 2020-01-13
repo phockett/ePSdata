@@ -28,7 +28,9 @@ git remote add https://github.com/phockett/ePSdata build/html
 This works:
 git remote add html https://github.com/phockett/ePSdata/build/html
 ... but not sure that's the intention.
-
+>>> Pages served OK from https://phockett.github.io/ePSdata/build/html/index.html
+May just need to add html redirect in project root.
+Could also just change docs dir, e.g. as per https://daler.github.io/sphinxdoc-test/includeme.html
 
 
 - Setup Sphinx
