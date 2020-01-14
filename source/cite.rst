@@ -7,9 +7,15 @@ Dataset
 -------
 Each ePSdata page corresponds to a dataset, with a unique DOI, and citation details at the foot of the page.
 
-These have the general form:
-
-
+These have the general form, following [DataCite], in Bibtex format:
+  @data{datasetName,
+    title = {ePSproc: datasetName}
+    author = {Hockett, Paul},
+    doi = {...},
+    publisher = {Zenodo},
+    year = {...},
+    url = {...}
+  }
 
 
 Computational tools
@@ -19,10 +25,72 @@ The results here use Gamess, ePolyScat and ePSproc. See the `methods` page for d
 
 For Gamess:
 
+  @article{Gamess1993,
+    author = {Schmidt, Michael W and Baldridge, Kim K and Boatz, Jerry A and Elbert, Steven T and Gordon, Mark S and Jensen, Jan H and Koseki, Shiro and Matsunaga, Nikita and Nguyen, Kiet A and Su, Shujun and Windus, Theresa L and Dupuis, Michel and Montgomery, John A},
+    doi = {10.1002/jcc.540141112},
+    issn = {1096-987X},
+    journal = {Journal of Computational Chemistry},
+    number = {11},
+    pages = {1347--1363},
+    publisher = {John Wiley {\&} Sons, Inc.},
+    title = {{General atomic and molecular electronic structure system}},
+    url = {http://dx.doi.org/10.1002/jcc.540141112},
+    volume = {14},
+    year = {1993}
+  }
+  @incollection{Gamess2005,
+    author = {Gordon, Mark S. and Schmidt, Michael W.},
+    booktitle = {Theory and Applications of Computational Chemistry},
+    chapter = {41},
+    doi = {10.1016/B978-044451719-7/50084-6},
+    pages = {1167--1189},
+    publisher = {Elsevier},
+    title = {{Advances in electronic structure theory}},
+    url = {https://linkinghub.elsevier.com/retrieve/pii/B9780444517197500846},
+    year = {2005}
+  }
+  @misc{GamessWebsite,
+    author = {Gordon, Mark S.},
+    title = {{Gamess website}},
+    url = {http://www.msg.ameslab.gov/gamess/}
+  }
 
 
 For ePolyScat:
 
+  @article{ePS1994,
+    author = {Gianturco, F. A. and Lucchese, R. R. and Sanna, N.},
+    doi = {10.1063/1.467237},
+    issn = {00219606},
+    journal = {The Journal of Chemical Physics},
+    month = {may},
+    number = {9},
+    pages = {6464},
+    publisher = {AIP Publishing},
+    title = {{Calculation of low-energy elastic cross sections for electron-CF4 scattering}},
+    url = {http://scitation.aip.org/content/aip/journal/jcp/100/9/10.1063/1.467237},
+    volume = {100},
+    year = {1994}
+  }
+
+  @article{ePS1999,
+    author = {Natalense, Alexandra P P and Lucchese, Robert R},
+    doi = {10.1063/1.479794},
+    issn = {00219606},
+    journal = {The Journal of Chemical Physics},
+    number = {12},
+    pages = {5344},
+    title = {{Cross section and asymmetry parameter calculation for sulfur 1s photoionization of SF[sub 6]}},
+    url = {http://link.aip.org/link/JCPSA6/v111/i12/p5344/s1{\&}Agg=doi},
+    volume = {111},
+    year = {1999}
+  }
+
+  @misc{ePSWebsite,
+    author = {Lucchese, R. R.},
+    title = {{Lucchese Group Website}},
+    url = {http://www.chem.tamu.edu/rgroup/lucchese/},
+  }
 
 
 For ePSproc:
@@ -76,3 +144,6 @@ Acknowledgements
 Special thanks to R.R. Lucchese and coworkers for `ePolyScat <http://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/manual.html>`_.
 
 Thanks, finally, and of course, to those supporting scientific software development and infrastructure (and making it easy!), including Github, Read the Docs, Pypi, SciPy etc. etc. In particular the python version of ePSproc makes use of `Xarray <http://xarray.pydata.org/en/stable/index.html>`_, and `Moble's spherical functions (& quaternion) <https://github.com/moble/spherical_functions>`_. See `methods` for more details.
+
+
+.. [DataCite] Fenner, M. et. al. (2019). A data citation roadmap for scholarly data repositories. Scientific Data, 6(1), 28. `DOI: 10.1038/s41597-019-0031-8 <https://doi.org/10.1038/s41597-019-0031-8>`_
