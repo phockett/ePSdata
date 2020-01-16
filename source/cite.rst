@@ -5,7 +5,7 @@ If you make use of ePS data results in your research, please cite as follows.
 
 Dataset
 -------
-Each ePSdata page corresponds to a dataset, with a unique DOI, and citation details at the foot of the page.
+Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs `ePSproc <https://epsproc.readthedocs.io>`_ to process and visualise an ePolyScat dataset; these all share the DOI, and are packaged together and uploaded to a `Zenodo <https://zenodo.org>`_ repository. (Zenodo is hosted by CERN, and follows `Open Science <https://about.zenodo.org>`_ and `FAIR principles <https://about.zenodo.org/principles/>`_.)
 
 These have the general form, following [DataCite], in Bibtex format:
   @data{datasetName,
@@ -14,16 +14,18 @@ These have the general form, following [DataCite], in Bibtex format:
     doi = {...},
     publisher = {Zenodo},
     year = {...},
-    url = {...}
+    url = {https://phockett.github.io/ePSdata/...}
   }
+
+(Note that @data may not be supported in all cases, use @misc instead - see, for instance, `this discussion on duecredit/Zenodo bibtex entries <https://github.com/duecredit/duecredit/issues/77>`_.)
 
 
 Computational tools
 -------------------
 
-The results here use Gamess, ePolyScat and ePSproc. See the `methods` page for details.
+The results here use `Gamess <http://www.msg.ameslab.gov/gamess/>`_, `ePolyScat <http://www.chem.tamu.edu/rgroup/lucchese/>`_ and `ePSproc <https://epsproc.readthedocs.io>`_. See the `methods` page for details.
 
-For Gamess:
+For `Gamess <http://www.msg.ameslab.gov/gamess/>`_:
 
   @article{Gamess1993,
     author = {Schmidt, Michael W and Baldridge, Kim K and Boatz, Jerry A and Elbert, Steven T and Gordon, Mark S and Jensen, Jan H and Koseki, Shiro and Matsunaga, Nikita and Nguyen, Kiet A and Su, Shujun and Windus, Theresa L and Dupuis, Michel and Montgomery, John A},
@@ -93,7 +95,7 @@ For ePolyScat:
   }
 
 
-For ePSproc:
+For `ePSproc <https://epsproc.readthedocs.io>`_:
 
 Cite the software directly via either Github or Figshare repositories for the software (note same DOI for both)::
 
