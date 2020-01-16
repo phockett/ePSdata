@@ -62,6 +62,9 @@ NOT https://phockett.github.io/ePSdata/build/html/ as currently.
 Issue with file structure... easiest to:
 (A) dump everything back to master branch.
 (B) include only HTML/ on gh-pages?  (Or docs on master?)
+>> Consolidating to master, just need to change Sphinx to build to docs/, then all gravy.
+>> Pages at https://phockett.github.io/ePSdata/
+>> Souce at https://github.com/phockett/ePSdata/tree/master/source
 
 Currently can't merge branches, as they are totally different...
 
