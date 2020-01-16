@@ -54,3 +54,30 @@ Pulls in subdirs as sepearte toctrees.
 - HTML build (Bemo)
 conda activate webDev
 make html
+
+16/01/20
+Fixing structure... want root pages at https://phockett.github.io/ePSdata/
+NOT https://phockett.github.io/ePSdata/build/html/ as currently.
+
+Issue with file structure... easiest to:
+(A) dump everything back to master branch.
+(B) include only HTML/ on gh-pages?  (Or docs on master?)
+
+Currently can't merge branches, as they are totally different...
+
+GIT FOR GITHUB PAGES
+
+Copy file foo between branches
+https://stackoverflow.com/questions/17416691/how-can-i-copy-files-from-a-branch-to-another-using-git
+git checkout gh-pages
+git checkout master foo
+git commit -m 'Add file foo to gh-pages.'
+
+From a specific commit
+https://stackoverflow.com/questions/307579/how-do-i-copy-a-version-of-a-single-file-from-one-git-branch-to-another#307872
+git checkout <commit_hash> <relative_path_to_file_or_dir>
+git checkout <remote_name>/<branch_name> <file_or_dir>
+
+For a dir:
+https://stackoverflow.com/questions/307579/how-do-i-copy-a-version-of-a-single-file-from-one-git-branch-to-another#307872
+git checkout other-branch app/**
