@@ -7,7 +7,8 @@ Dataset
 -------
 Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs `ePSproc <https://epsproc.readthedocs.io>`_ to process and visualise an ePolyScat dataset; these all share the DOI, and are packaged together and uploaded to a `Zenodo <https://zenodo.org>`_ repository. (Zenodo is hosted by CERN, and follows `Open Science <https://about.zenodo.org>`_ and `FAIR principles <https://about.zenodo.org/principles/>`_.)
 
-These have the general form, following [DataCite], in Bibtex format:
+These have the general form, following [DataCite], in Bibtex format::
+
   @data{datasetName,
     title = {ePSproc: datasetName}
     author = {Hockett, Paul},
@@ -25,7 +26,7 @@ Computational tools
 
 The results here use `Gamess <http://www.msg.ameslab.gov/gamess/>`_, `ePolyScat <http://www.chem.tamu.edu/rgroup/lucchese/>`_ and `ePSproc <https://epsproc.readthedocs.io>`_. See the `methods` page for details.
 
-For `Gamess <http://www.msg.ameslab.gov/gamess/>`_:
+For `Gamess <http://www.msg.ameslab.gov/gamess/>`_::
 
   @article{Gamess1993,
     author = {Schmidt, Michael W and Baldridge, Kim K and Boatz, Jerry A and Elbert, Steven T and Gordon, Mark S and Jensen, Jan H and Koseki, Shiro and Matsunaga, Nikita and Nguyen, Kiet A and Su, Shujun and Windus, Theresa L and Dupuis, Michel and Montgomery, John A},
@@ -58,7 +59,7 @@ For `Gamess <http://www.msg.ameslab.gov/gamess/>`_:
   }
 
 
-For ePolyScat:
+For ePolyScat::
 
   @article{ePS1994,
     author = {Gianturco, F. A. and Lucchese, R. R. and Sanna, N.},
