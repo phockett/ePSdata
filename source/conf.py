@@ -89,7 +89,7 @@ nbsphinx_prolog = r"""
         Interactive online version:
         :raw-html:`<a href="https://mybinder.org/v2/gh/spatialaudio/nbsphinx/{{ env.config.release }}?filepath={{ docname }}"><img alt="Binder badge" src="https://mybinder.org/badge_logo.svg" style="vertical-align:text-bottom"></a>`
 
-        Problems?  Please raise any issues on Github. (LINK)
+        Problems?  Please raise `any issues on Github <https://github.com/phockett/ePSdata/issues/new/choose>`__.
 
         To cite this dataset [...]
 
