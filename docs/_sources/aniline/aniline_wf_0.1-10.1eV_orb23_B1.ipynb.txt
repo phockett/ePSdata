@@ -4,32 +4,34 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# ePSproc: auto-gen template development, Jupyter-runner version TIDY\n",
+    "# ePSproc:  Aniline Orb 23 (B1) ionization\n",
     "\n",
-    "10/01/20\n",
-    "- Updating with Euler labels.\n",
-    "- Incorporated changes from 16/12/19 version (unfinished).\n",
+    "- *electronic structure input*: aniline_aug-cc-pVDZ_E_orbLT56.molden\n",
+    "- *ePS output file*: aniline_wf_0.1-10.1eV_orb23_B1.inp.out\n",
+    "- *Web version*: https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html\n",
+    "- Dataset: DOI (dataset): [10.5281/zenodo.3612483](http://dx.doi.org/10.5281/zenodo.3612483)\n",
+    "- [Citation details](#Cite-this-dataset)\n",
     "\n",
-    "05/12/19\n",
-    "- Updated with lmPlot() routine.\n",
+    "## Job details\n",
     "\n",
-    "05/11/19\n",
-    "- Set for single template per ePS datafile.\n",
-    "- Outputs BLM-L and BLM-V, named as per input file + datestamp."
+    "-  ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb23_B1\n",
+    "-  Aniline Orb 23 (B1) ionization, wavefn run on AntonJr\n",
+    "-  E=0.1:0.2:10.1 (51 points)\n",
+    "-  Mon Mar 25 17:48:51 EDT 2019"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Set-up"
+    "## Set-up"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Load modules"
+    "### Load modules"
    ]
   },
   {
@@ -60,7 +62,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Load data"
+    "### Load data"
    ]
   },
   {
@@ -194,7 +196,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Job & molecule info"
+    "## Job & molecule info"
    ]
   },
   {
@@ -251,7 +253,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# 1-photon ePS Cross-Sections\n",
+    "## 1-photon ePS Cross-Sections\n",
     "Plot 1-photon cross-sections and $beta_2$ parameters (for an unaligned ensemble) from ePS calculations. These are taken directly from the ePS output file, `CrossSection` segments. See the [ePS manual, `GetCro` command, for further details](https://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/GetCro.html)."
    ]
   },
@@ -259,7 +261,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Cross-sections by symmetry & type\n",
+    "### Cross-sections by symmetry & type\n",
     "\n",
     "Types correspond to:\n",
     "\n",
@@ -302,7 +304,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## $\\beta_{2}$ by symmetry & type\n",
+    "### $\\beta_{2}$ by symmetry & type\n",
     "\n",
     "Types & symmetries as per cross-sections.  Normalized $\\beta_{2}$ paramters, dimensionless."
    ]
@@ -336,7 +338,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Dipole matrix elements\n",
+    "## Dipole matrix elements\n",
     "For 1-photon ionization. These are taken directly from ePS `DumpIdy` segments. See the [ePS manual, `DumpIdy` command, for further details](https://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/DumpIdy.html)."
    ]
   },
@@ -426,7 +428,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# MFPADs\n",
+    "## MFPADs\n",
     "\n",
     "Calculated MF $\\beta$ parameters, using ePS dipole matrix elements. These are calculated by `ep.mfblm()`, as a function of energy and polarization geometry. See [the ePSproc docs on `ep.mfblm()`](https://epsproc.readthedocs.io/en/latest/modules/epsproc.MFBLM.html) for further details, and [this demo notebook](https://epsproc.readthedocs.io/en/latest/ePSproc_BLM_calc_demo_Sept2019_rst/ePSproc_BLM_calc_demo_Sept2019.html)."
    ]
@@ -464,7 +466,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "['Written to h5netcdf format', '/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out_BLM-L_2020-01-11_15-37-07.nc']\n"
+      "['Written to h5netcdf format', '/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out_BLM-L_2020-01-14_08-50-07.nc']\n"
      ]
     },
     {
@@ -538,7 +540,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Error & consistency checks"
+    "## Error & consistency checks"
    ]
   },
   {
@@ -599,7 +601,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "['Written to h5netcdf format', '/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out_BLM-V_2020-01-11_15-37-07.nc']\n"
+      "['Written to h5netcdf format', '/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out_BLM-V_2020-01-14_08-50-07.nc']\n"
      ]
     },
     {
@@ -769,14 +771,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Version info"
+    "## Version info"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Original job details"
+    "### Original job details"
    ]
   },
   {
@@ -802,7 +804,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## ePSproc details"
+    "### ePSproc details"
    ]
   },
   {
@@ -811,8 +813,8 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "templateVersion = '0.0.5'\n",
-    "templateDate = '10/01/20'"
+    "templateVersion = '0.0.6'\n",
+    "templateDate = '12/01/20'"
    ]
   },
   {
@@ -856,7 +858,7 @@
        ]
       },
       "text/html": [
-       "<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.3</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Sat Jan 11 19:06:09 2020 EST</td></tr></table>"
+       "<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.3</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Jan 14 12:20:34 2020 EST</td></tr></table>"
       ],
       "text/latex": [
        "\\begin{tabular}{|l|l|}\\hline\n",
@@ -866,7 +868,7 @@
        "OS & Linux 5.0.0 36 generic x86\\_64 with debian buster sid \\\\ \\hline\n",
        "epsproc & 1.2.3 \\\\ \\hline\n",
        "xarray & 0.14.0 \\\\ \\hline\n",
-       "\\hline \\multicolumn{2}{|l|}{Sat Jan 11 19:06:09 2020 EST} \\\\ \\hline\n",
+       "\\hline \\multicolumn{2}{|l|}{Tue Jan 14 12:20:34 2020 EST} \\\\ \\hline\n",
        "\\end{tabular}\n"
       ],
       "text/plain": [
@@ -876,7 +878,7 @@
        "OS Linux 5.0.0 36 generic x86_64 with debian buster sid\n",
        "epsproc 1.2.3\n",
        "xarray 0.14.0\n",
-       "Sat Jan 11 19:06:09 2020 EST"
+       "Tue Jan 14 12:20:34 2020 EST"
       ]
      },
      "execution_count": 23,
@@ -897,7 +899,7 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Run: 2020-01-11_15-37-07\n",
+      "Run: 2020-01-14_08-50-07\n",
       "Host: jake\n"
      ]
     }
@@ -909,11 +911,29 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "\n",
+    "## Cite this dataset\n",
+    "\n",
+    "Hockett, Paul (2019). *ePSproc:  Aniline Orb 23 (B1) ionization*. Dataset on Zenodo. DOI: 10.5281/zenodo.3612483. URL: https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html\n",
+    "\n",
+    "*Bibtex*:\n",
+    "```bibtex\n",
+    "@data{ Aniline Orb 23 (B1) ionization,\n",
+    "    title = {ePSproc:  Aniline Orb 23 (B1) ionization}\n",
+    "    author = {Hockett, Paul},\n",
+    "    doi = {10.5281/zenodo.3612483},\n",
+    "    publisher = {Zenodo},\n",
+    "    year = {2019},\n",
+    "    url = {https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html}\n",
+    "  }\n",
+    "```\n",
+    "\n",
+    "See [citation notes on ePSdata](https://phockett.github.io/ePSdata/cite.html) for further details.\n",
+    "\n"
+   ]
   }
  ],
  "metadata": {
@@ -932,7 +952,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.4"
+   "version": "3.7.5"
   }
  },
  "nbformat": 4,

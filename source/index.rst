@@ -9,7 +9,7 @@ ePS data
  about
  methods
  cite
-
+                
 .. toctree::
    :maxdepth: 2
    :caption: aniline
@@ -17,26 +17,11 @@ ePS data
 
    aniline/*
 
-
-.. toctree::
-   :maxdepth: 2
-   :caption: _templates
-   :glob:
-
-   _templates/*
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: _static
-   :glob:
-
-   _static/*
-
-
+                       
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+                    

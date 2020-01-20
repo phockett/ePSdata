@@ -87,13 +87,13 @@ nbsphinx_prolog = r"""
 
         This page was generated from `{{ env.docname }}`__.
         Interactive online version:
-        :raw-html:`<a href="https://mybinder.org/v2/gh/spatialaudio/nbsphinx/{{ env.config.release }}?filepath={{ docname }}"><img alt="Binder badge" src="https://mybinder.org/badge_logo.svg" style="vertical-align:text-bottom"></a>`
+        :raw-html:`<a href="https://mybinder.org/v2/gh/phockett/ePSdata/{{ env.config.release }}?filepath={{ docname }}"><img alt="Binder badge" src="https://mybinder.org/badge_logo.svg" style="vertical-align:text-bottom"></a>`
 
         Problems?  Please raise `any issues on Github <https://github.com/phockett/ePSdata/issues/new/choose>`__.
 
-        To cite this dataset [...]
+        `Cite this dataset <#Cite-this-dataset>`__.
 
-    __ https://github.com/phockett/ePSdata/blob/gh-pages/{{ docname }}
+    __ https://github.com/phockett/ePSdata/blob/master/{{ docname }}
 
 
 

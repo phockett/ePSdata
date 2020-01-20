@@ -39,7 +39,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ePSproc: auto-gen template development, Jupyter-runner version TIDY" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html" />
+    <link rel="next" title="ePSproc: Aniline Orb 23 (B1) ionization" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html" />
     <link rel="prev" title="ePSdata" href="about.html" /> 
 </head>
 
@@ -96,15 +96,9 @@
 </ul>
 <p class="caption"><span class="caption-text">aniline</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#Set-up">Set-up</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#Job-&amp;-molecule-info">Job &amp; molecule info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#1-photon-ePS-Cross-Sections">1-photon ePS Cross-Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#Dipole-matrix-elements">Dipole matrix elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#MFPADs">MFPADs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#Error-&amp;-consistency-checks">Error &amp; consistency checks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html#Version-info">Version info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-5.1eV_S1geom_orb25_B1.html">ePSproc: Aniline nbsphinx testing.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">ePSproc: Aniline Orb 23 (B1) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb24_A2.html">ePSproc: Aniline Orb 24 (A2) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb33_A2.html">ePSproc: Aniline Orb 33 (A2) ionization</a></li>
 </ul>
 
             
@@ -198,15 +192,92 @@
 <p>If you make use of ePS data results in your research, please cite as follows.</p>
 <div class="section" id="dataset">
 <h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h2>
-<p>Each ePSdata page corresponds to a dataset, with a unique DOI, and citation details at the foot of the page.</p>
-<p>These have the general form:</p>
+<p>Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs <a class="reference external" href="https://epsproc.readthedocs.io">ePSproc</a> to process and visualise an ePolyScat dataset; these all share the DOI, and are packaged together and uploaded to a <a class="reference external" href="https://zenodo.org">Zenodo</a> repository. (Zenodo is hosted by CERN, and follows <a class="reference external" href="https://about.zenodo.org">Open Science</a> and <a class="reference external" href="https://about.zenodo.org/principles/">FAIR principles</a>.)</p>
+<p>These have the general form, following [DataCite], in Bibtex format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@data</span><span class="p">{</span><span class="n">datasetName</span><span class="p">,</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">ePSproc</span><span class="p">:</span> <span class="n">datasetName</span><span class="p">}</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Hockett</span><span class="p">,</span> <span class="n">Paul</span><span class="p">},</span>
+  <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">},</span>
+  <span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">Zenodo</span><span class="p">},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">phockett</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ePSdata</span><span class="o">/...</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>(Note that &#64;data may not be supported in all cases, use &#64;misc instead - see, for instance, <a class="reference external" href="https://github.com/duecredit/duecredit/issues/77">this discussion on duecredit/Zenodo bibtex entries</a>.)</p>
 </div>
 <div class="section" id="computational-tools">
 <h2>Computational tools<a class="headerlink" href="#computational-tools" title="Permalink to this headline">¶</a></h2>
-<p>The results here use Gamess, ePolyScat and ePSproc. See the <cite>methods</cite> page for details.</p>
-<p>For Gamess:</p>
+<p>The results here use <a class="reference external" href="http://www.msg.ameslab.gov/gamess/">Gamess</a>, <a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/">ePolyScat</a> and <a class="reference external" href="https://epsproc.readthedocs.io">ePSproc</a>. See the <cite>methods</cite> page for details.</p>
+<p>For <a class="reference external" href="http://www.msg.ameslab.gov/gamess/">Gamess</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span><span class="n">Gamess1993</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Schmidt</span><span class="p">,</span> <span class="n">Michael</span> <span class="n">W</span> <span class="ow">and</span> <span class="n">Baldridge</span><span class="p">,</span> <span class="n">Kim</span> <span class="n">K</span> <span class="ow">and</span> <span class="n">Boatz</span><span class="p">,</span> <span class="n">Jerry</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">Elbert</span><span class="p">,</span> <span class="n">Steven</span> <span class="n">T</span> <span class="ow">and</span> <span class="n">Gordon</span><span class="p">,</span> <span class="n">Mark</span> <span class="n">S</span> <span class="ow">and</span> <span class="n">Jensen</span><span class="p">,</span> <span class="n">Jan</span> <span class="n">H</span> <span class="ow">and</span> <span class="n">Koseki</span><span class="p">,</span> <span class="n">Shiro</span> <span class="ow">and</span> <span class="n">Matsunaga</span><span class="p">,</span> <span class="n">Nikita</span> <span class="ow">and</span> <span class="n">Nguyen</span><span class="p">,</span> <span class="n">Kiet</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">Su</span><span class="p">,</span> <span class="n">Shujun</span> <span class="ow">and</span> <span class="n">Windus</span><span class="p">,</span> <span class="n">Theresa</span> <span class="n">L</span> <span class="ow">and</span> <span class="n">Dupuis</span><span class="p">,</span> <span class="n">Michel</span> <span class="ow">and</span> <span class="n">Montgomery</span><span class="p">,</span> <span class="n">John</span> <span class="n">A</span><span class="p">},</span>
+  <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1002</span><span class="o">/</span><span class="n">jcc</span><span class="o">.</span><span class="mi">540141112</span><span class="p">},</span>
+  <span class="n">issn</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1096</span><span class="o">-</span><span class="mi">987</span><span class="n">X</span><span class="p">},</span>
+  <span class="n">journal</span> <span class="o">=</span> <span class="p">{</span><span class="n">Journal</span> <span class="n">of</span> <span class="n">Computational</span> <span class="n">Chemistry</span><span class="p">},</span>
+  <span class="n">number</span> <span class="o">=</span> <span class="p">{</span><span class="mi">11</span><span class="p">},</span>
+  <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1347</span><span class="o">--</span><span class="mi">1363</span><span class="p">},</span>
+  <span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">John</span> <span class="n">Wiley</span> <span class="p">{</span>\<span class="o">&amp;</span><span class="p">}</span> <span class="n">Sons</span><span class="p">,</span> <span class="n">Inc</span><span class="o">.</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">General</span> <span class="n">atomic</span> <span class="ow">and</span> <span class="n">molecular</span> <span class="n">electronic</span> <span class="n">structure</span> <span class="n">system</span><span class="p">}},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dx</span><span class="o">.</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1002</span><span class="o">/</span><span class="n">jcc</span><span class="o">.</span><span class="mi">540141112</span><span class="p">},</span>
+  <span class="n">volume</span> <span class="o">=</span> <span class="p">{</span><span class="mi">14</span><span class="p">},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1993</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nd">@incollection</span><span class="p">{</span><span class="n">Gamess2005</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Gordon</span><span class="p">,</span> <span class="n">Mark</span> <span class="n">S</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Schmidt</span><span class="p">,</span> <span class="n">Michael</span> <span class="n">W</span><span class="o">.</span><span class="p">},</span>
+  <span class="n">booktitle</span> <span class="o">=</span> <span class="p">{</span><span class="n">Theory</span> <span class="ow">and</span> <span class="n">Applications</span> <span class="n">of</span> <span class="n">Computational</span> <span class="n">Chemistry</span><span class="p">},</span>
+  <span class="n">chapter</span> <span class="o">=</span> <span class="p">{</span><span class="mi">41</span><span class="p">},</span>
+  <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1016</span><span class="o">/</span><span class="n">B978</span><span class="o">-</span><span class="mi">044451719</span><span class="o">-</span><span class="mi">7</span><span class="o">/</span><span class="mi">50084</span><span class="o">-</span><span class="mi">6</span><span class="p">},</span>
+  <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1167</span><span class="o">--</span><span class="mi">1189</span><span class="p">},</span>
+  <span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">Elsevier</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">Advances</span> <span class="ow">in</span> <span class="n">electronic</span> <span class="n">structure</span> <span class="n">theory</span><span class="p">}},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">linkinghub</span><span class="o">.</span><span class="n">elsevier</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">retrieve</span><span class="o">/</span><span class="n">pii</span><span class="o">/</span><span class="n">B9780444517197500846</span><span class="p">},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2005</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nd">@misc</span><span class="p">{</span><span class="n">GamessWebsite</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Gordon</span><span class="p">,</span> <span class="n">Mark</span> <span class="n">S</span><span class="o">.</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">Gamess</span> <span class="n">website</span><span class="p">}},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">ameslab</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">gamess</span><span class="o">/</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>For ePolyScat:</p>
-<p>For ePSproc:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span><span class="n">ePS1994</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Gianturco</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span> <span class="n">A</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Lucchese</span><span class="p">,</span> <span class="n">R</span><span class="o">.</span> <span class="n">R</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Sanna</span><span class="p">,</span> <span class="n">N</span><span class="o">.</span><span class="p">},</span>
+  <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1063</span><span class="o">/</span><span class="mf">1.467237</span><span class="p">},</span>
+  <span class="n">issn</span> <span class="o">=</span> <span class="p">{</span><span class="mi">00219606</span><span class="p">},</span>
+  <span class="n">journal</span> <span class="o">=</span> <span class="p">{</span><span class="n">The</span> <span class="n">Journal</span> <span class="n">of</span> <span class="n">Chemical</span> <span class="n">Physics</span><span class="p">},</span>
+  <span class="n">month</span> <span class="o">=</span> <span class="p">{</span><span class="n">may</span><span class="p">},</span>
+  <span class="n">number</span> <span class="o">=</span> <span class="p">{</span><span class="mi">9</span><span class="p">},</span>
+  <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6464</span><span class="p">},</span>
+  <span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">AIP</span> <span class="n">Publishing</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">Calculation</span> <span class="n">of</span> <span class="n">low</span><span class="o">-</span><span class="n">energy</span> <span class="n">elastic</span> <span class="n">cross</span> <span class="n">sections</span> <span class="k">for</span> <span class="n">electron</span><span class="o">-</span><span class="n">CF4</span> <span class="n">scattering</span><span class="p">}},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">scitation</span><span class="o">.</span><span class="n">aip</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">aip</span><span class="o">/</span><span class="n">journal</span><span class="o">/</span><span class="n">jcp</span><span class="o">/</span><span class="mi">100</span><span class="o">/</span><span class="mi">9</span><span class="o">/</span><span class="mf">10.1063</span><span class="o">/</span><span class="mf">1.467237</span><span class="p">},</span>
+  <span class="n">volume</span> <span class="o">=</span> <span class="p">{</span><span class="mi">100</span><span class="p">},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1994</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@article</span><span class="p">{</span><span class="n">ePS1999</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Natalense</span><span class="p">,</span> <span class="n">Alexandra</span> <span class="n">P</span> <span class="n">P</span> <span class="ow">and</span> <span class="n">Lucchese</span><span class="p">,</span> <span class="n">Robert</span> <span class="n">R</span><span class="p">},</span>
+  <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1063</span><span class="o">/</span><span class="mf">1.479794</span><span class="p">},</span>
+  <span class="n">issn</span> <span class="o">=</span> <span class="p">{</span><span class="mi">00219606</span><span class="p">},</span>
+  <span class="n">journal</span> <span class="o">=</span> <span class="p">{</span><span class="n">The</span> <span class="n">Journal</span> <span class="n">of</span> <span class="n">Chemical</span> <span class="n">Physics</span><span class="p">},</span>
+  <span class="n">number</span> <span class="o">=</span> <span class="p">{</span><span class="mi">12</span><span class="p">},</span>
+  <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5344</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">Cross</span> <span class="n">section</span> <span class="ow">and</span> <span class="n">asymmetry</span> <span class="n">parameter</span> <span class="n">calculation</span> <span class="k">for</span> <span class="n">sulfur</span> <span class="mi">1</span><span class="n">s</span> <span class="n">photoionization</span> <span class="n">of</span> <span class="n">SF</span><span class="p">[</span><span class="n">sub</span> <span class="mi">6</span><span class="p">]}},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">link</span><span class="o">.</span><span class="n">aip</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">link</span><span class="o">/</span><span class="n">JCPSA6</span><span class="o">/</span><span class="n">v111</span><span class="o">/</span><span class="n">i12</span><span class="o">/</span><span class="n">p5344</span><span class="o">/</span><span class="n">s1</span><span class="p">{</span>\<span class="o">&amp;</span><span class="p">}</span><span class="n">Agg</span><span class="o">=</span><span class="n">doi</span><span class="p">},</span>
+  <span class="n">volume</span> <span class="o">=</span> <span class="p">{</span><span class="mi">111</span><span class="p">},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1999</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@misc</span><span class="p">{</span><span class="n">ePSWebsite</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Lucchese</span><span class="p">,</span> <span class="n">R</span><span class="o">.</span> <span class="n">R</span><span class="o">.</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">Lucchese</span> <span class="n">Group</span> <span class="n">Website</span><span class="p">}},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">chem</span><span class="o">.</span><span class="n">tamu</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">rgroup</span><span class="o">/</span><span class="n">lucchese</span><span class="o">/</span><span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For <a class="reference external" href="https://epsproc.readthedocs.io">ePSproc</a>:</p>
 <p>Cite the software directly via either Github or Figshare repositories for the software (note same DOI for both):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@misc</span><span class="p">{</span><span class="n">ePSprocGithub</span><span class="p">,</span>
   <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">ePSproc</span><span class="p">:</span> <span class="n">Post</span><span class="o">-</span><span class="n">processing</span> <span class="k">for</span> <span class="n">ePolyScat</span><span class="p">},</span>
@@ -252,6 +323,11 @@
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
 <p>Special thanks to R.R. Lucchese and coworkers for <a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/manual.html">ePolyScat</a>.</p>
 <p>Thanks, finally, and of course, to those supporting scientific software development and infrastructure (and making it easy!), including Github, Read the Docs, Pypi, SciPy etc. etc. In particular the python version of ePSproc makes use of <a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">Xarray</a>, and <a class="reference external" href="https://github.com/moble/spherical_functions">Moble’s spherical functions (&amp; quaternion)</a>. See <cite>methods</cite> for more details.</p>
+<dl class="citation">
+<dt class="label" id="datacite"><span class="brackets">DataCite</span></dt>
+<dd><p>Fenner, M. et. al. (2019). A data citation roadmap for scholarly data repositories. Scientific Data, 6(1), 28. <a class="reference external" href="https://doi.org/10.1038/s41597-019-0031-8">DOI: 10.1038/s41597-019-0031-8</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -263,7 +339,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html" class="btn btn-neutral float-right" title="ePSproc: auto-gen template development, Jupyter-runner version TIDY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html" class="btn btn-neutral float-right" title="ePSproc: Aniline Orb 23 (B1) ionization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="about.html" class="btn btn-neutral float-left" title="ePSdata" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

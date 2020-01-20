@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ePSproc: Aniline Orb 23 (B1) ionization &mdash; ePSdata 0.1 documentation</title>
+  <title>ePSproc: Aniline Orb 24 (A2) ionization &mdash; ePSdata 0.1 documentation</title>
   
 
   
@@ -17,30 +17,28 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ePSproc: Aniline Orb 24 (A2) ionization" href="aniline_wf_0.1-10.1eV_orb24_A2.html" />
-    <link rel="prev" title="Citation" href="../cite.html" /> 
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,7 +52,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> ePSdata
+            <a href="../../index.html" class="icon icon-home"> ePSdata
           
 
           
@@ -67,7 +65,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -86,37 +84,14 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about.html">ePSdata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">ePSdata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cite.html">Citation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">aniline</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ePSproc: Aniline Orb 23 (B1) ionization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Job-details">Job details</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Set-up">Set-up</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Load-modules">Load modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Load-data">Load data</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#Job-&amp;-molecule-info">Job &amp; molecule info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#1-photon-ePS-Cross-Sections">1-photon ePS Cross-Sections</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Cross-sections-by-symmetry-&amp;-type">Cross-sections by symmetry &amp; type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#\beta_{2}-by-symmetry-&amp;-type"><span class="math notranslate nohighlight">\(\beta_{2}\)</span> by symmetry &amp; type</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#Dipole-matrix-elements">Dipole matrix elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#MFPADs">MFPADs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Error-&amp;-consistency-checks">Error &amp; consistency checks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Version-info">Version info</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Original-job-details">Original job details</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ePSproc-details">ePSproc details</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#Cite-this-dataset">Cite this dataset</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="aniline_wf_0.1-10.1eV_orb24_A2.html">ePSproc: Aniline Orb 24 (A2) ionization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aniline_wf_0.1-10.1eV_orb33_A2.html">ePSproc: Aniline Orb 33 (A2) ionization</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aniline_wf_0.1-10.1eV_orb23_B1.html">ePSproc: Aniline Orb 23 (B1) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aniline_wf_0.1-10.1eV_orb24_A2.html">ePSproc: Aniline Orb 24 (A2) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aniline_wf_0.1-10.1eV_orb33_A2.html">ePSproc: Aniline Orb 33 (A2) ionization</a></li>
 </ul>
 
             
@@ -131,7 +106,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">ePSdata</a>
+          <a href="../../index.html">ePSdata</a>
         
       </nav>
 
@@ -160,15 +135,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>ePSproc: Aniline Orb 23 (B1) ionization</li>
+      <li>ePSproc: Aniline Orb 24 (A2) ionization</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/aniline/aniline_wf_0.1-10.1eV_orb23_B1.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/aniline/.ipynb_checkpoints/aniline_wf_0.1-10.1eV_orb24_A2-checkpoint.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -404,28 +379,28 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle">This page was generated from <a class="reference external" href="https://github.com/phockett/ePSdata/blob/master/source/aniline/aniline_wf_0.1-10.1eV_orb23_B1.ipynb">aniline/aniline_wf_0.1-10.1eV_orb23_B1</a>.
+<p class="admonition-title fa fa-exclamation-circle">This page was generated from <a class="reference external" href="https://github.com/phockett/ePSdata/blob/master/source/aniline/.ipynb_checkpoints/aniline_wf_0.1-10.1eV_orb24_A2-checkpoint.ipynb">aniline/.ipynb_checkpoints/aniline_wf_0.1-10.1eV_orb24_A2-checkpoint</a>.
 Interactive online version:
-<span class="raw-html"><a href="https://mybinder.org/v2/gh/phockett/ePSdata/0.1?filepath=source/aniline/aniline_wf_0.1-10.1eV_orb23_B1.ipynb"><img alt="Binder badge" src="https://mybinder.org/badge_logo.svg" style="vertical-align:text-bottom"></a></span></p>
+<span class="raw-html"><a href="https://mybinder.org/v2/gh/phockett/ePSdata/0.1?filepath=source/aniline/.ipynb_checkpoints/aniline_wf_0.1-10.1eV_orb24_A2-checkpoint.ipynb"><img alt="Binder badge" src="https://mybinder.org/badge_logo.svg" style="vertical-align:text-bottom"></a></span></p>
 <p>Problems?  Please raise <a class="reference external" href="https://github.com/phockett/ePSdata/issues/new/choose">any issues on Github</a>.</p>
 <p><a class="reference external" href="#Cite-this-dataset">Cite this dataset</a>.</p>
 </div>
-<div class="section" id="ePSproc:-Aniline-Orb-23-(B1)-ionization">
-<h1>ePSproc: Aniline Orb 23 (B1) ionization<a class="headerlink" href="#ePSproc:-Aniline-Orb-23-(B1)-ionization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ePSproc:-Aniline-Orb-24-(A2)-ionization">
+<h1>ePSproc: Aniline Orb 24 (A2) ionization<a class="headerlink" href="#ePSproc:-Aniline-Orb-24-(A2)-ionization" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><em>electronic structure input</em>: aniline_aug-cc-pVDZ_E_orbLT56.molden</p></li>
-<li><p><em>ePS output file</em>: aniline_wf_0.1-10.1eV_orb23_B1.inp.out</p></li>
-<li><p><em>Web version</em>: <a class="reference external" href="https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html</a></p></li>
-<li><p>Dataset: DOI (dataset): <a class="reference external" href="http://dx.doi.org/10.5281/zenodo.3612483">10.5281/zenodo.3612483</a></p></li>
+<li><p><em>ePS output file</em>: aniline_wf_0.1-10.1eV_orb24_A2.inp.out</p></li>
+<li><p><em>Web version</em>: <a class="reference external" href="https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb24_A2.html">https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb24_A2.html</a></p></li>
+<li><p>Dataset: DOI (dataset): <a class="reference external" href="http://dx.doi.org/10.5281/zenodo.3612507">10.5281/zenodo.3612507</a></p></li>
 <li><p><a class="reference external" href="#Cite-this-dataset">Citation details</a></p></li>
 </ul>
 <div class="section" id="Job-details">
 <h2>Job details<a class="headerlink" href="#Job-details" title="Permalink to this headline">¶</a></h2>
+<p>ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb24_A2</p>
 <ul class="simple">
-<li><p>ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb23_B1</p></li>
-<li><p>Aniline Orb 23 (B1) ionization, wavefn run on AntonJr</p></li>
+<li><p>Aniline Orb 24 (A2) ionization, wavefn run on AntonJr</p></li>
 <li><p>E=0.1:0.2:10.1 (51 points)</p></li>
-<li><p>Mon Mar 25 17:48:51 EDT 2019</p></li>
+<li><p>Mon Mar 25 17:48:46 EDT 2019</p></li>
 </ul>
 </div>
 <div class="section" id="Set-up">
@@ -487,10 +462,10 @@ Interactive online version:
 <div class="highlight"><pre>
 *** Job info from file header.
 
- ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb23_B1
- Aniline Orb 23 (B1) ionization, wavefn run on AntonJr
+ ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb24_A2
+ Aniline Orb 24 (A2) ionization, wavefn run on AntonJr
  E=0.1:0.2:10.1 (51 points)
- Mon Mar 25 17:48:51 EDT 2019
+ Mon Mar 25 17:48:46 EDT 2019
 
 *** Found orbitals
 1   1 Ene =     -15.5686 Spin =Alpha Occup =   2.000000
@@ -562,9 +537,9 @@ Z =  1 ZS =  1 r =   0.0000000000   0.8462720000   2.8135300000
 *** ePSproc readMatEle(): scanning files for CrossSection segments.
 
 *** Scanning file(s)
-[&#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out&#39;]
+[&#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb24_A2.inp.out&#39;]
 
-*** Reading ePS output file:  /home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out
+*** Reading ePS output file:  /home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb24_A2.inp.out
 Expecting 51 energy points.
 Expecting 3 symmetries.
 Scanning CrossSection segments.
@@ -574,9 +549,9 @@ Processed 4 sets of CrossSection file segments, (0 blank)
 *** ePSproc readMatEle(): scanning files for DumpIdy segments.
 
 *** Scanning file(s)
-[&#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out&#39;]
+[&#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb24_A2.inp.out&#39;]
 
-*** Reading ePS output file:  /home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out
+*** Reading ePS output file:  /home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb24_A2.inp.out
 Expecting 51 energy points.
 Expecting 3 symmetries.
 Scanning CrossSection segments.
@@ -607,23 +582,23 @@ Processed 153 sets of DumpIdy file segments, (0 blank)
 <div class="highlight"><pre>
 
 *** Job summary data
- ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb23_B1
- Aniline Orb 23 (B1) ionization, wavefn run on AntonJr
+ ePS aniline, batch aniline_wf_0.1-10.1eV, orbital orb24_A2
+ Aniline Orb 24 (A2) ionization, wavefn run on AntonJr
  E=0.1:0.2:10.1 (51 points)
- Mon Mar 25 17:48:51 EDT 2019
+ Mon Mar 25 17:48:46 EDT 2019
 
 Electronic structure input: &#39;/home/paul/ePS_stuff/aniline/electronic_structure/aniline_aug-cc-pVDZ_E_orbLT56.molden&#39;
 Initial state occ:               [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
-Final state occ:                 [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2]
+Final state occ:                 [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2]
 IPot (input vertical IP, eV):            7.70
 
 *** Additional orbital info (SymProd)
-Ionizing orb:                    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0]
-Ionizing orb sym:                [&#39;B1&#39;]
-Orb energy (eV):                 [-12.09818222]
-Orb energy (H):                  [-0.4446]
-Orb energy (cm^-1):              [-97578.42110968]
-Threshold wavelength (nm):       102.48167459852694
+Ionizing orb:                    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0]
+Ionizing orb sym:                [&#39;A2&#39;]
+Orb energy (eV):                 [-9.13758343]
+Orb energy (H):                  [-0.3358]
+Orb energy (cm^-1):              [-73699.58121599]
+Threshold wavelength (nm):       135.68598131776378
 
 *** Molecular structure
 
@@ -633,7 +608,7 @@ Threshold wavelength (nm):       102.48167459852694
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_9_1.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_9_1.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_9_1.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_9_1.png" />
 </div>
 </div>
 </div>
@@ -667,7 +642,7 @@ Threshold wavelength (nm):       102.48167459852694
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_12_0.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_12_0.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_12_0.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_12_0.png" />
 </div>
 </div>
 </div>
@@ -690,7 +665,7 @@ Threshold wavelength (nm):       102.48167459852694
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_14_0.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_14_0.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_14_0.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_14_0.png" />
 </div>
 </div>
 </div>
@@ -739,7 +714,7 @@ Threshold wavelength (nm):       102.48167459852694
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=1.0913746668594624, with Seaborn
+Plotting data aniline_wf_0.1-10.1eV_orb24_A2.inp.out, pType=a, thres=1.2117686568229338, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -760,21 +735,21 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=1.091374666
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=phaseUW, thres=1.0913746668594624, with Seaborn
+Plotting data aniline_wf_0.1-10.1eV_orb24_A2.inp.out, pType=phaseUW, thres=1.2117686568229338, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_17_4.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_17_4.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_17_4.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_17_4.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_17_5.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_17_5.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_17_5.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_17_5.png" />
 </div>
 </div>
 </div>
@@ -823,7 +798,7 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=phaseUW, thres=1.091
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out_BLM-L_2020-01-14_08-50-07.nc&#39;]
+[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb24_A2.inp.out_BLM-L_2020-01-14_08-50-12.nc&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -860,23 +835,32 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=phaseUW, thres=1.091
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=0.1, with Seaborn
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_22_1.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_22_1.png" />
+<div class="highlight"><pre>
+Plotting data aniline_wf_0.1-10.1eV_orb24_A2.inp.out, pType=a, thres=0.1, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_22_2.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_22_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_22_2.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_22_2.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_22_3.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_22_3.png" />
 </div>
 </div>
 </div>
@@ -904,7 +888,7 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=0.1, with S
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_24_0.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_24_0.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_24_0.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_24_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -946,7 +930,7 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=0.1, with S
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb23_B1.inp.out_BLM-V_2020-01-14_08-50-07.nc&#39;]
+[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/aniline/aniline_wf_0.1-10.1eV/aniline_wf_0.1-10.1eV_orb24_A2.inp.out_BLM-V_2020-01-14_08-50-12.nc&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -983,23 +967,32 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=0.1, with S
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=0.1, with Seaborn
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_27_1.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_27_1.png" />
+<div class="highlight"><pre>
+Plotting data aniline_wf_0.1-10.1eV_orb24_A2.inp.out, pType=a, thres=0.1, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_27_2.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_27_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_27_2.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_27_2.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_27_3.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_27_3.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1038,22 +1031,31 @@ Plotting data aniline_wf_0.1-10.1eV_orb23_B1.inp.out, pType=a, thres=0.1, with S
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Differences, L vs. V gauge BLMs
-Max difference in BLMs (L-V): 0 (0.2548682822812244-2.2399981633121735e-17j)
-Plotting data (No filename), pType=a, thres=0.02548682822812244, with Seaborn
+Max difference in BLMs (L-V): 0 (0.5613726677989382-3.030384858026634e-17j)
+Plotting data (No filename), pType=a, thres=0.05613726677989383, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_28_1.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_28_1.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_28_2.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_28_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_28_2.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_28_2.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_28_3.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_28_3.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1080,14 +1082,23 @@ Plotting data (No filename), pType=a, thres=0.02548682822812244, with Seaborn
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Machine tolerance:  2.220446049250313e-16
-Max imaginary value: 0 9.013859456890828e-16
+Max imaginary value: 0 4.292690607227634e-16
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_29_1.png" src="../_images/aniline_aniline_wf_0.1-10.1eV_orb23_B1_29_1.png" />
+<img alt="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_29_2.png" src="../../_images/aniline_.ipynb_checkpoints_aniline_wf_0.1-10.1eV_orb24_A2-checkpoint_29_2.png" />
 </div>
 </div>
 </div>
@@ -1111,7 +1122,7 @@ Max imaginary value: 0 9.013859456890828e-16
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 ePolyScat Version E3
-Run:  2019-03-25  18:02:29.612 (GMT -0400)
+Run:  2019-03-26  01:35:46.111 (GMT -0400)
 </pre></div></div>
 </div>
 </div>
@@ -1150,7 +1161,7 @@ Run:  2019-03-25  18:02:29.612 (GMT -0400)
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.3</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Jan 14 12:20:34 2020 EST</td></tr></table></div>
+<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.3</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Jan 14 12:14:35 2020 EST</td></tr></table></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
@@ -1168,7 +1179,7 @@ Run:  2019-03-25  18:02:29.612 (GMT -0400)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Run: 2020-01-14_08-50-07
+Run: 2020-01-14_08-50-12
 Host: jake
 </pre></div></div>
 </div>
@@ -1176,15 +1187,15 @@ Host: jake
 </div>
 <div class="section" id="Cite-this-dataset">
 <h2>Cite this dataset<a class="headerlink" href="#Cite-this-dataset" title="Permalink to this headline">¶</a></h2>
-<p>Hockett, Paul (2019). <em>ePSproc: Aniline Orb 23 (B1) ionization</em>. Dataset on Zenodo. DOI: 10.5281/zenodo.3612483. URL: <a class="reference external" href="https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html</a></p>
+<p>Hockett, Paul (2019). <em>ePSproc: Aniline Orb 24 (A2) ionization</em>. Dataset on Zenodo. DOI: 10.5281/zenodo.3612507. URL: <a class="reference external" href="https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb24_A2.html">https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb24_A2.html</a></p>
 <p><em>Bibtex</em>:</p>
-<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span>@data{ Aniline Orb 23 (B1) ionization,
-    title = {ePSproc:  Aniline Orb 23 (B1) ionization}
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span>@data{ Aniline Orb 24 (A2) ionization,
+    title = {ePSproc:  Aniline Orb 24 (A2) ionization}
     author = {Hockett, Paul},
-    doi = {10.5281/zenodo.3612483},
+    doi = {10.5281/zenodo.3612507},
     publisher = {Zenodo},
     year = {2019},
-    url = {https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html}
+    url = {https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb24_A2.html}
   }
 </pre></div>
 </div>
@@ -1197,15 +1208,6 @@ Host: jake
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="aniline_wf_0.1-10.1eV_orb24_A2.html" class="btn btn-neutral float-right" title="ePSproc: Aniline Orb 24 (A2) ionization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../cite.html" class="btn btn-neutral float-left" title="Citation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
