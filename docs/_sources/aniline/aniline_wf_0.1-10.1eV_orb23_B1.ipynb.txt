@@ -4,12 +4,16 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3612483.svg)](http://dx.doi.org/10.5281/zenodo.3612483)  [![Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)\n",
+    "\n",
     "# ePSproc:  Aniline Orb 23 (B1) ionization\n",
     "\n",
     "- *electronic structure input*: aniline_aug-cc-pVDZ_E_orbLT56.molden\n",
     "- *ePS output file*: aniline_wf_0.1-10.1eV_orb23_B1.inp.out\n",
     "- *Web version*: https://phockett.github.io/ePSdata/aniline/aniline_wf_0.1-10.1eV_orb23_B1.html\n",
-    "- Dataset: DOI (dataset): [10.5281/zenodo.3612483](http://dx.doi.org/10.5281/zenodo.3612483)\n",
+    "- Dataset: https://zenodo.org/record/3612483\n",
+    "- DOI (dataset): [10.5281/zenodo.3612483](http://dx.doi.org/10.5281/zenodo.3612483)\n",
+    "- Licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)\n",
     "- [Citation details](#Cite-this-dataset)\n",
     "\n",
     "## Job details\n",
@@ -932,6 +936,8 @@
     "```\n",
     "\n",
     "See [citation notes on ePSdata](https://phockett.github.io/ePSdata/cite.html) for further details.\n",
+    "\n",
+    "[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3612483.svg)](http://dx.doi.org/10.5281/zenodo.3612483)  [![Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)\n",
     "\n"
    ]
   }
@@ -952,7 +958,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.5"
+   "version": "3.7.4"
   }
  },
  "nbformat": 4,

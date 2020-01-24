@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ePSdata &mdash; ePSdata 0.1 documentation</title>
+  <title>About ePSdata &mdash; ePSdata 0.1 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="About these documents" href="#" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Citation" href="cite.html" />
-    <link rel="prev" title="ePS data" href="index.html" /> 
+    <link rel="next" title="Methods" href="methods.html" />
+    <link rel="prev" title="ePS data: Photoionization calculations archive" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -57,6 +57,9 @@
             <a href="index.html" class="icon icon-home"> ePSdata
           
 
+          
+            
+            <img src="_static/ePSproc_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -84,10 +87,28 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption"><span class="caption-text">Intro:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ePSdata</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About ePSdata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Demos">Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Citation-&amp;-acknowledgements">Citation &amp; acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Motivation">Motivation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Scientific">Scientific</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Science-policy/open-science">Science policy/open science</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cite.html">Citation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABCO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ABCO/ABCO_0.01-5.01eV_orb31_A1.html">ePSproc: ABCO wavefn run, HOMO ioinzation (A1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ABCO/ABCO_1-50eV_orb30_E.html">ePSproc: ABCO HOMO-1 (orb 30) ioinzation (E) 1-50eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ABCO/ABCO_1-50eV_orb31_A1.html">ePSproc: ABCO HOMO (orb 31) ioinzation (A1) 1-50eV</a></li>
 </ul>
 <p class="caption"><span class="caption-text">aniline</span></p>
 <ul>
@@ -139,13 +160,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>ePSdata</li>
+      <li>About ePSdata</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/about.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/about.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,9 +203,115 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="epsdata">
-<h1>ePSdata<a class="headerlink" href="#epsdata" title="Permalink to this headline">¶</a></h1>
-<p>Photoionization calculation results - Jupyter notebooks and HTML.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">This page was auto-generated from a Jupyter notebook: <a class="reference external" href="https://github.com/phockett/ePSdata/blob/master/source/about.ipynb">about</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><ul>
+<li><p><a class="reference external" href="https://phockett.github.io/ePSdata/about.html">About ePSdata</a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference external" href="#Cite-this-dataset">Cite this dataset</a>.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>Problems?  Please raise <a class="reference external" href="https://github.com/phockett/ePSdata/issues/new/choose">any issues on Github</a>.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="About-ePSdata">
+<h1>About ePSdata<a class="headerlink" href="#About-ePSdata" title="Permalink to this headline">¶</a></h1>
+<p>21/01/20</p>
+<div class="section" id="Overview">
+<h2>Overview<a class="headerlink" href="#Overview" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/manual.html">ePolyScat</a> (ePS) is an open-source tool for numerical computation of electron-molecule scattering &amp; photoionization by Lucchese &amp; coworkers. For more details try:</p>
+<ul>
+<li><p>The <a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/manual.html">ePolyScat website and manual</a>.</p></li>
+<li><p><em>Calculation of low-energy elastic cross sections for electron-CF4 scattering</em>, F. A. Gianturco, R. R. Lucchese, and N. Sanna, J. Chem. Phys. 100, 6464 (1994), <a class="reference external" href="http://dx.doi.org/10.1063/1.467237">http://dx.doi.org/10.1063/1.467237</a></p></li>
+<li><p><em>Cross section and asymmetry parameter calculation for sulfur 1s photoionization of SF6</em>, A. P. P. Natalense and R. R. Lucchese, J. Chem. Phys. 111, 5344 (1999), <a class="reference external" href="http://dx.doi.org/10.1063/1.479794">http://dx.doi.org/10.1063/1.479794</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://epsproc.readthedocs.io">ePSproc</a> is an open-source tool for post-processing &amp; visualisation of ePS results, aimed primarily at photoionization studies.</p>
+<ul>
+<li><p>Ongoing documentation is on <a class="reference external" href="https://epsproc.readthedocs.io">Read the Docs</a>.</p></li>
+<li><p>Source code is <a class="reference external" href="https://github.com/phockett/ePSproc">available on Github</a>.</p></li>
+<li><p>For more background, see the software metapaper for the original release of ePSproc (Aug. 2016): <em>ePSproc: Post-processing suite for ePolyScat electron-molecule scattering calculations</em>, on <a class="reference external" href="https://www.authorea.com/users/71114/articles/122402/_show_article">Authorea</a> or <a class="reference external" href="https://arxiv.org/abs/1611.04043">arXiv 1611.04043</a>.</p></li>
+</ul>
+</li>
+<li><p>ePSdata is an open-data/open-science collection of ePS + ePSproc results.</p>
+<ul>
+<li><p>ePSdata collects ePS datasets, post-processed via ePSproc (Python) in <a class="reference external" href="https://jupyter.org">Jupyter notebooks</a>, for a full open-data/open-science transparent pipeline.</p></li>
+<li><p>ePSdata is currently (Jan 2020) collecting existing calculations from 2010 - 2019, from the <a class="reference external" href="http://femtolab.ca">femtolabs at NRC</a>, with one notebook per ePS job.</p></li>
+<li><p>In future, ePSdata pages will be automatically generated from ePS jobs (via the ePSman toolset, currently in development), for immediate dissemination to the research community.</p></li>
+<li><p>Source notebooks are available on the <a class="reference external" href="https://github.com/phockett/ePSdata/">Github project pages</a>, and notebooks + datasets via <a class="reference external" href="https://about.zenodo.org">Zenodo repositories</a> (one per dataset). Each notebook + dataset is given a Zenodo DOI for full traceability, and notebooks are versioned on Github.</p></li>
+<li><p>Note: ePSdata may also be linked or mirrored on the existing <a class="reference external" href="https://osf.io/psjxt/">ePolyScat Collected Results OSF project</a>, but will effectively supercede those pages.</p></li>
+<li><p>All results are released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0) license, and are part of our ongoing <a class="reference external" href="http://femtolab.ca/?p=877">Open Science initiative</a>.</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="ePSproc demo" src="https://epsproc.readthedocs.io/en/latest/_images/output_12_2.png" /></p>
+</div>
+<div class="section" id="Demos">
+<h2>Demos<a class="headerlink" href="#Demos" title="Permalink to this headline">¶</a></h2>
+<p>For an introduction to ePS and ePSproc, see:</p>
+<ul class="simple">
+<li><p>Sample ePS jobs from the <a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/manual.html">ePolyScat website and manual</a></p></li>
+<li><p>Demos for ePSproc:</p>
+<ul>
+<li><p><a class="reference external" href="https://epsproc.readthedocs.io/en/latest/ePSproc_demo_Aug2019/ePSproc_demo_Aug2019.html">Basic use demo</a></p></li>
+<li><p><cite>:math:</cite>beta_{lm}` calculations demo &lt;<a class="reference external" href="https://epsproc.readthedocs.io/en/latest/ePSproc_BLM_calc_demo_Sept2019_rst/ePSproc_BLM_calc_demo_Sept2019.html">https://epsproc.readthedocs.io/en/latest/ePSproc_BLM_calc_demo_Sept2019_rst/ePSproc_BLM_calc_demo_Sept2019.html</a>&gt;`__</p></li>
+</ul>
+</li>
+</ul>
+<p>(More demos coming soon.)</p>
+</div>
+<div class="section" id="Workflow">
+<h2>Workflow<a class="headerlink" href="#Workflow" title="Permalink to this headline">¶</a></h2>
+<p>The basic ePSproc workflow (from the <a class="reference external" href="(https://www.authorea.com/users/71114/articles/122402/_show_article)">original software metapaper</a> is shown below: essentially, the ePS output file is parsed for photoionization matrix elements, and ancillary data; the matrix elements are the used to calculate properties of interest, such as photoionziation cross-sections and MF-PADs. For ePSdata, this workflow is applied to each ePS dataset, with a Jupyter notebook as a template. The completed analysis &amp;
+dataset is then uploaded to Zenodo, and HTML version to ePSdata. (An updated workflow chart will be appearing soon.)</p>
+<p><img alt="ePSproc workflow" src="https://www.authorea.com/users/71114/articles/122402/master/file/figures/ePSproc_workflow_fig_040816/ePSproc_workflow_fig_040816.png" /></p>
+</div>
+<div class="section" id="Citation-&amp;-acknowledgements">
+<h2>Citation &amp; acknowledgements<a class="headerlink" href="#Citation-&-acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>Each notebook &amp; dataset has a DOI, see the <a class="reference external" href="https://phockett.github.io/ePSdata/cite.html">citations page</a> for further details.</p>
+</div>
+<div class="section" id="Motivation">
+<h2>Motivation<a class="headerlink" href="#Motivation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Scientific">
+<h3>Scientific<a class="headerlink" href="#Scientific" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Platform development for quantum metrology with photoelectrons; see, for example:</p>
+<ul>
+<li><p><a class="reference external" href="https://vimeo.com/223603377">Phase-sensitive Photoelectron Metrology (video, 2017)</a></p></li>
+<li><p><a class="reference external" href="http://femtolab.ca/?p=1030">Quantum Metrology with Photoelectron (books, 2018)</a>.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1103/PhysRevLett.119.083401">Molecular Frame Reconstruction Using Time-Domain Photoionization Interferometry. Marceau et. al. (2017). Physical Review Letters, 119(8), 083401</a></p></li>
+</ul>
+</li>
+<li><p>Theory and method development.</p></li>
+<li><p>Bridge-building and method unification between theory and experiment.</p></li>
+<li><p>Lowering the barrier to entry for photoionization studies.</p></li>
+<li><p>Sharing and disemination of computational results and data, which would not otherwise be subject to “traditional” publication, and just sit on a hard-drive.</p></li>
+<li><p>General good scientific practice and open science…</p></li>
+</ul>
+</div>
+<div class="section" id="Science-policy/open-science">
+<h3>Science policy/open science<a class="headerlink" href="#Science-policy/open-science" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>All things open: open data, open science, open source software. (See further reading below, and also the <a class="reference external" href="http://femtolab.ca/?p=877">Open Science Initiative</a>).</p></li>
+<li><p>Reproducibility, and avoiding the reproducibility crises.</p></li>
+<li><p>Transparency, and making full computational results stacks available.</p></li>
+<li><p>Building a community resource.</p></li>
+</ul>
+<p>Some further reading on these topics, in no particular order: * <a class="reference external" href="https://doi.org/10.5334/jors.ay">Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research. Stodden, V., &amp; Miguez, S. (2014). Journal of Open Research Software, 2(1), e21</a> * <a class="reference external" href="http://science.sciencemag.org/content/352/6290/1147.full">Taking up TOP. McNutt, M. (2016). Science, 352(6290)</a> * <a class="reference external" href="https://figshare.com/articles/The_State_of_Open_Data_Report/4036398">The State of Open Data Report.
+(2016)</a> * <a class="reference external" href="https://doi.org/10.1126/science.aab2374">Promoting an open research culture. Nosek et. al. (2015). Science, 348(6242), 1422–1425.</a> * <a class="reference external" href="https://doi.org/10.1038/467753a">Publish your computer code: it is good enough. Barnes, N. (2010). Nature, 467(7317), 753.</a> * <a class="reference external" href="https://doi.org/10.5334/jors.bt">Community Recommendations for Sustainable Scientific Software. Downs, R. R., Lenhardt, W. C., Robinson, E., Davis, E., &amp; Weber, N. (2015). Journal
+of Open Research Software, 3(1).</a></p>
+<p>For more general discussion, tools and further resources, see, for example: * <a class="reference external" href="https://en.m.wikipedia.org/wiki/Science_2.0">Science 2.0 (Wikipedia)</a> * <a class="reference external" href="https://cos.io/">Center for Open Science</a> * <a class="reference external" href="https://opensciencemooc.eu/modules/reproducible-research-and-data-analysis/">Reproducible Research and Data Analysis module at Open Science MOOC</a> (includes many more tools, links and references, <a class="reference external" href="https://opensciencemooc.eu">many other modules are available too</a>).</p>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/223603377" width="640" height="360" frameborder="0" allowfullscreen></iframe></div>
+</div>
 </div>
 
 
@@ -195,10 +322,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cite.html" class="btn btn-neutral float-right" title="Citation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="methods.html" class="btn btn-neutral float-right" title="Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="ePS data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="ePS data: Photoionization calculations archive" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

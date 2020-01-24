@@ -1,11 +1,11 @@
 Citation
 ========
 
-If you make use of ePS data results in your research, please cite as follows.
+If you make use of ePSdata results in your research, please cite as follows. (`Get the citations as a .bib file here. <cite_ePSdata.bib>`_)
 
 Dataset
 -------
-Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs `ePSproc <https://epsproc.readthedocs.io>`_ to process and visualise an ePolyScat dataset; these all share the DOI, and are packaged together and uploaded to a `Zenodo <https://zenodo.org>`_ repository. (Zenodo is hosted by CERN, and follows `Open Science <https://about.zenodo.org>`_ and `FAIR principles <https://about.zenodo.org/principles/>`_.)
+Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs `ePSproc <https://epsproc.readthedocs.io>`_ to process and visualise an `ePolyScat <http://www.chem.tamu.edu/rgroup/lucchese/>`_ dataset; these all share the DOI, and are packaged together and uploaded to a `Zenodo <https://zenodo.org>`_ repository. (Zenodo is hosted by CERN, and follows `Open Science <https://about.zenodo.org>`_ and `FAIR principles <https://about.zenodo.org/principles/>`_.)
 
 These have the general form, following [DataCite], in Bibtex format::
 
@@ -59,7 +59,7 @@ For `Gamess <http://www.msg.ameslab.gov/gamess/>`_::
   }
 
 
-For ePolyScat::
+For `ePolyScat <http://www.chem.tamu.edu/rgroup/lucchese/>`_::
 
   @article{ePS1994,
     author = {Gianturco, F. A. and Lucchese, R. R. and Sanna, N.},

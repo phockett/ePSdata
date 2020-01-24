@@ -52,7 +52,7 @@ exclude_patterns = []
 #
 # html_theme = 'alabaster'
 html_theme = "sphinx_rtd_theme"
-html_logo = 'figs/ePSproc_logo.png'
+html_logo = '_figs/ePSproc_logo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -86,13 +86,11 @@ nbsphinx_prolog = r"""
 
     .. nbinfo::
 
-        This page was generated from a Jupyter notebook: `{{ env.docname }}`__.
+        This page was auto-generated from a Jupyter notebook: `{{ env.docname }}`__.
 
-        Problems?  Please raise `any issues on Github <https://github.com/phockett/ePSdata/issues/new/choose>`__.
-
-        `Cite this dataset <#Cite-this-dataset>`__.
-
-        :raw-html: `Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)</a> <img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)">`
+         * - `About ePSdata <https://phockett.github.io/ePSdata/about.html>`__
+         * - `Cite this dataset <#Cite-this-dataset>`__.
+         * - Problems?  Please raise `any issues on Github <https://github.com/phockett/ePSdata/issues/new/choose>`__.
 
     __ https://github.com/phockett/ePSdata/blob/master/{{ docname }}
 
