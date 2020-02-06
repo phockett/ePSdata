@@ -7,7 +7,7 @@ Dataset
 -------
 Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs `ePSproc <https://epsproc.readthedocs.io>`_ to process and visualise an `ePolyScat <http://www.chem.tamu.edu/rgroup/lucchese/>`_ dataset; these all share the DOI, and are packaged together and uploaded to a `Zenodo <https://zenodo.org>`_ repository. (Zenodo is hosted by CERN, and follows `Open Science <https://about.zenodo.org>`_ and `FAIR principles <https://about.zenodo.org/principles/>`_.)
 
-These have the general form, following [DataCite], in Bibtex format::
+These have the general form, following [DataCite]_, in Bibtex format::
 
   @data{datasetName,
     title = {ePSproc: datasetName}
@@ -18,7 +18,7 @@ These have the general form, following [DataCite], in Bibtex format::
     url = {https://phockett.github.io/ePSdata/...}
   }
 
-(Note that @data may not be supported in all cases, use @misc instead - see, for instance, `this discussion on duecredit/Zenodo bibtex entries <https://github.com/duecredit/duecredit/issues/77>`_.)
+(Note that @data may not be supported in all cases, use @misc instead - see, for instance, `this discussion on duecredit/Zenodo bibtex entries <https://github.com/duecredit/duecredit/issues/77>`_. Another viable route is reformatting as `@article` with "Dataset on Zenodo" for the journal name, see `Publishing Datasets on Zenodo and Citing them with Mendeley for discussion <https://allixender.blogspot.com/2018/02/publishing-datasets-on-zenodo-and.html>`_. For other citation styles/options, try putting a specific DOI into `citation.crosscite.org <https://citation.crosscite.org>`_.)
 
 
 Computational tools
