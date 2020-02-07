@@ -90,7 +90,10 @@
               <p class="caption"><span class="caption-text">Intro:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About ePSdata</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Methods</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Formalism">Formalism</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="cite.html">Citation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABCO</span></p>
@@ -162,7 +165,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/methods.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/methods.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -199,8 +202,79 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="methods">
-<h1>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">This page was auto-generated from a Jupyter notebook: <a class="reference external" href="https://github.com/phockett/ePSdata/blob/master/source/methods.ipynb">methods</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><ul>
+<li><p><a class="reference external" href="https://phockett.github.io/ePSdata/about.html">About ePSdata</a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference external" href="#Cite-this-dataset">Cite this dataset</a>.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>Problems?  Please raise <a class="reference external" href="https://github.com/phockett/ePSdata/issues/new/choose">any issues on Github</a>.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="Methods">
+<h1>Methods<a class="headerlink" href="#Methods" title="Permalink to this headline">¶</a></h1>
+<p>07/02/20</p>
+<p>Each notebook on ePSdata shows various aspects of the results from an ePolyScat computation. The main sections of the notebooks are self-describing. Some additional details on the methods used are given here.</p>
+<ul class="simple">
+<li><p>For more infomation on the ePolyScat results, see the <a class="reference external" href="https://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual">ePS manual</a>, and refs. therein.</p></li>
+<li><p>Additional computations make use of <a class="reference external" href="https://epsproc.readthedocs.io/en/latest/about.html">ePSproc codes</a>, and the ePS matrix elements, to compute values such as <span class="math notranslate nohighlight">\(\beta_{L,M}\)</span> for molecular and lab frames.</p></li>
+<li><p>For more information on plotting methods, see the <code class="docutils literal notranslate"><span class="pre">`ep.lmPlot</span></code> demo &lt;<a class="reference external" href="https://epsproc.readthedocs.io/en/latest/demos/ePSproc_demo_matE_plotting_Feb2020.html">https://epsproc.readthedocs.io/en/latest/demos/ePSproc_demo_matE_plotting_Feb2020.html</a>&gt;`__.</p></li>
+</ul>
+<div class="section" id="Formalism">
+<h2>Formalism<a class="headerlink" href="#Formalism" title="Permalink to this headline">¶</a></h2>
+<p>ePolyScat matrix elements:</p>
+<p><span class="math">\begin{equation}
+I_{l,m,\mu}^{p_{i}\mu_{i},p_{f}\mu_{f}}(E)=\langle\Psi_{i}^{p_{i},\mu_{i}}|\hat{d_{\mu}}|\Psi_{f}^{p_{f},\mu_{f}}\varphi_{klm}^{(-)}\rangle\label{eq:I}
+\end{equation}</span></p>
+<p>MFPADs are given by:</p>
+<p><span class="math">\begin{equation}
+T_{\mu_{0}}^{p_{i}\mu_{i},p_{f}\mu_{f}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})=\sum_{l,m,\mu}I_{l,m,\mu}^{p_{i}\mu_{i},p_{f}\mu_{f}}(E)Y_{lm}^{*}(\theta_{\hat{k}},\phi_{\hat{k}})D_{\mu,\mu_{0}}^{1}(R_{\hat{n}})\label{eq:TMF}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+I_{\mu_{0}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})=\frac{4\pi^{2}E}{cg_{p_{i}}}\sum_{\mu_{i},\mu_{f}}|T_{\mu_{0}}^{p_{i}\mu_{i},p_{f}\mu_{f}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})|^{2}\label{eq:MFPAD}
+\end{equation}</span></p>
+<p>In this formalism:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I_{l,m,\mu}^{p_{i}\mu_{i},p_{f}\mu_{f}}(E)\)</span> is the radial part of the dipole matrix element, determined from the initial and final state electronic wavefunctions <span class="math notranslate nohighlight">\(\Psi_{i}^{p_{i},\mu_{i}}\)</span>and <span class="math notranslate nohighlight">\(\Psi_{f}^{p_{f},\mu_{f}}\)</span>, photoelectron wavefunction <span class="math notranslate nohighlight">\(\varphi_{klm}^{(-)}\)</span> and dipole operator <span class="math notranslate nohighlight">\(\hat{d_{\mu}}\)</span>. Here the wavefunctions are indexed by irreducible representation (i.e. symmetry) by the labels <span class="math notranslate nohighlight">\(p_{i}\)</span> and <span class="math notranslate nohighlight">\(p_{f}\)</span>, with components
+<span class="math notranslate nohighlight">\(\mu_{i}\)</span> and <span class="math notranslate nohighlight">\(\mu_{f}\)</span> respectively; <span class="math notranslate nohighlight">\(l,m\)</span> are angular momentum components, <span class="math notranslate nohighlight">\(\mu\)</span> is the projection of the polarization into the MF (from a value <span class="math notranslate nohighlight">\(\mu_{0}\)</span> in the LF). Each energy and irreducible representation corresponds to a calculation in ePolyScat.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{\mu_{0}}^{p_{i}\mu_{i},p_{f}\mu_{f}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})\)</span> is the full matrix element (expanded in polar coordinates) in the MF, where <span class="math notranslate nohighlight">\(\hat{k}\)</span> denotes the direction of the photoelectron <span class="math notranslate nohighlight">\(\mathbf{k}\)</span>-vector, and <span class="math notranslate nohighlight">\(\hat{n}\)</span> the direction of the polarization vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> of the ionizing light. Note that the summation over components <span class="math notranslate nohighlight">\(\{l,m,\mu\}\)</span> is coherent, and hence phase sensitive.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Y_{lm}^{*}(\theta_{\hat{k}},\phi_{\hat{k}})\)</span> is a spherical harmonic.</p></li>
+<li><p><span class="math notranslate nohighlight">\(D_{\mu,\mu_{0}}^{1}(R_{\hat{n}})\)</span> is a Wigner rotation matrix element, with a set of Euler angles <span class="math notranslate nohighlight">\(R_{\hat{n}}=(\phi_{\hat{n}},\theta_{\hat{n}},\chi_{\hat{n}})\)</span>, which rotates/projects the polarization into the MF .</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_{\mu_{0}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})\)</span> is the final (observable) MFPAD, for a polarization <span class="math notranslate nohighlight">\(\mu_{0}\)</span> and summed over all symmetry components of the initial and final states, <span class="math notranslate nohighlight">\(\mu_{i}\)</span> and <span class="math notranslate nohighlight">\(\mu_{f}\)</span>. Note that this sum can be expressed as an incoherent summation, since these components are (by definition) orthogonal.</p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{p_{i}}\)</span> is the degeneracy of the state <span class="math notranslate nohighlight">\(p_{i}\)</span>.</p></li>
+</ul>
+<p>See: Toffoli, D., Lucchese, R. R., Lebech, M., Houver, J. C., &amp; Dowek, D. (2007). Molecular frame and recoil frame photoelectron angular distributions from dissociative photoionization of NO2. The Journal of Chemical Physics, 126(5), 054307. <a class="reference external" href="https://doi.org/10.1063/1.2432124">https://doi.org/10.1063/1.2432124</a></p>
+<p>From the matrix elements other quantities can be computed. The <span class="math notranslate nohighlight">\(\beta_{L,M}\)</span> parameters (MF) are defined as:</p>
+<p>:nbsphinx-math:<a href="#id2"><span class="problematic" id="id3">`</span></a>begin{eqnarray}
+beta_{L,-M}^{mu_{i},mu_{f}} &amp; = &amp; sum_{l,m,mu}sum_{l’,m’,mu’}(-1)^{M}(-1)^{m}(-1)^{(mu’-mu_{0})}left(frac{(2l+1)(2l’+1)(2L+1)}{4pi}right)^{1/2}left(begin{array}{ccc}
+l &amp; l’ &amp; L\
+0 &amp; 0 &amp; 0
+end{array}right)left(begin{array}{ccc}
+l &amp; l’ &amp; L\
+-m &amp; m’ &amp; -M
+end{array}right)nonumber \</p>
+<blockquote>
+<div><p>&amp; times &amp; sum_{P,R’,R}(2P+1)(-1)^{(R’-R)}left(begin{array}{ccc}</p>
+</div></blockquote>
+<p>1 &amp; 1 &amp; P\
+mu &amp; -mu’ &amp; R’
+end{array}right)left(begin{array}{ccc}
+1 &amp; 1 &amp; P\
+mu_{0} &amp; -mu_{0} &amp; R
+end{array}right)D_{-R’,-R}^{P}(R_{hat{n}})I_{l,m,mu}^{p_{i}mu_{i},p_{f}mu_{f}}(E)I_{l’,m’,mu’}^{p_{i}mu_{i},p_{f}mu_{f}*}(E)
+end{eqnarray}`</p>
+<p>See <cite>the ePSproc docs on ``ep.mfblm()`</cite> &lt;<a class="reference external" href="https://epsproc.readthedocs.io/en/latest/modules/epsproc.MFBLM.html">https://epsproc.readthedocs.io/en/latest/modules/epsproc.MFBLM.html</a>&gt;`__ for further details, and <a class="reference external" href="https://epsproc.readthedocs.io/en/latest/demos/ePSproc_BLM_calc_demo_Sept2019.html">this demo notebook</a>.</p>
+</div>
 </div>
 
 

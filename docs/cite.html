@@ -210,7 +210,7 @@
 <div class="section" id="dataset">
 <h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h2>
 <p>Each ePSdata webpage corresponds to a dataset, with a unique DOI, and citation details at the foot of the page. Each webpage originates as a Jupyter Notebook, which employs <a class="reference external" href="https://epsproc.readthedocs.io">ePSproc</a> to process and visualise an <a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/">ePolyScat</a> dataset; these all share the DOI, and are packaged together and uploaded to a <a class="reference external" href="https://zenodo.org">Zenodo</a> repository. (Zenodo is hosted by CERN, and follows <a class="reference external" href="https://about.zenodo.org">Open Science</a> and <a class="reference external" href="https://about.zenodo.org/principles/">FAIR principles</a>.)</p>
-<p>These have the general form, following [DataCite], in Bibtex format:</p>
+<p>These have the general form, following <a class="reference internal" href="#datacite" id="id1"><span>[DataCite]</span></a>, in Bibtex format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@data</span><span class="p">{</span><span class="n">datasetName</span><span class="p">,</span>
   <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">ePSproc</span><span class="p">:</span> <span class="n">datasetName</span><span class="p">}</span>
   <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Hockett</span><span class="p">,</span> <span class="n">Paul</span><span class="p">},</span>
@@ -221,7 +221,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>(Note that &#64;data may not be supported in all cases, use &#64;misc instead - see, for instance, <a class="reference external" href="https://github.com/duecredit/duecredit/issues/77">this discussion on duecredit/Zenodo bibtex entries</a>.)</p>
+<p>(Note that &#64;data may not be supported in all cases, use &#64;misc instead - see, for instance, <a class="reference external" href="https://github.com/duecredit/duecredit/issues/77">this discussion on duecredit/Zenodo bibtex entries</a>. Another viable route is reformatting as <cite>&#64;article</cite> with “Dataset on Zenodo” for the journal name, see <a class="reference external" href="https://allixender.blogspot.com/2018/02/publishing-datasets-on-zenodo-and.html">Publishing Datasets on Zenodo and Citing them with Mendeley for discussion</a>. For other citation styles/options, try putting a specific DOI into <a class="reference external" href="https://citation.crosscite.org">citation.crosscite.org</a>.)</p>
 </div>
 <div class="section" id="computational-tools">
 <h2>Computational tools<a class="headerlink" href="#computational-tools" title="Permalink to this headline">¶</a></h2>
@@ -341,7 +341,7 @@
 <p>Special thanks to R.R. Lucchese and coworkers for <a class="reference external" href="http://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual/manual.html">ePolyScat</a>.</p>
 <p>Thanks, finally, and of course, to those supporting scientific software development and infrastructure (and making it easy!), including Github, Read the Docs, Pypi, SciPy etc. etc. In particular the python version of ePSproc makes use of <a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">Xarray</a>, and <a class="reference external" href="https://github.com/moble/spherical_functions">Moble’s spherical functions (&amp; quaternion)</a>. See <cite>methods</cite> for more details.</p>
 <dl class="citation">
-<dt class="label" id="datacite"><span class="brackets">DataCite</span></dt>
+<dt class="label" id="datacite"><span class="brackets"><a class="fn-backref" href="#id1">DataCite</a></span></dt>
 <dd><p>Fenner, M. et. al. (2019). A data citation roadmap for scholarly data repositories. Scientific Data, 6(1), 28. <a class="reference external" href="https://doi.org/10.1038/s41597-019-0031-8">DOI: 10.1038/s41597-019-0031-8</a></p>
 </dd>
 </dl>

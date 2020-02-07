@@ -160,6 +160,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/223603377\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen></iframe>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "### Science policy/open science\n",
     "\n",
     "* All things open: open data, open science, open source software. (See further reading below, and also the [Open Science Initiative](http://femtolab.ca/?p=877)).\n",
@@ -168,6 +175,7 @@
     "* Building a community resource.\n",
     "\n",
     "Some further reading on these topics, in no particular order:\n",
+    "\n",
     "* [*Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research.* Stodden, V., & Miguez, S. (2014).  Journal of Open Research Software, 2(1), e21](https://doi.org/10.5334/jors.ay)\n",
     "* [*Taking up TOP*. McNutt, M. (2016). Science, 352(6290)](http://science.sciencemag.org/content/352/6290/1147.full)\n",
     "* [*The State of Open Data Report*. (2016)](https://figshare.com/articles/The_State_of_Open_Data_Report/4036398)\n",
@@ -176,6 +184,7 @@
     "* [*Community Recommendations for Sustainable Scientific Software.* Downs, R. R., Lenhardt, W. C., Robinson, E., Davis, E., & Weber, N. (2015). Journal of Open Research Software, 3(1).](https://doi.org/10.5334/jors.bt)\n",
     "\n",
     "For more general discussion, tools and further resources, see, for example: \n",
+    "\n",
     "* [Science 2.0 (Wikipedia)](https://en.m.wikipedia.org/wiki/Science_2.0)\n",
     "* [Center for Open Science](https://cos.io/)\n",
     "* [Reproducible Research and Data Analysis module at Open Science MOOC](https://opensciencemooc.eu/modules/reproducible-research-and-data-analysis/) (includes many more tools, links and references, [many other modules are available too](https://opensciencemooc.eu)).\n"
@@ -185,15 +194,30 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/223603377\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen></iframe>"
+    "<img src=\"http://femtolab.ca/wordpress/wp-content/uploads/2017/03/grav_box_img23164957.jpg\" alt=\"Open data\">"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<img src=\"http://femtolab.ca/wordpress/wp-content/uploads/2017/03/grav_box_img23164957.jpg\" alt=\"Open data\">"
+    "## Notes"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Web pages are auto-generated from source Jupyter notebooks: please [raise any issues on Github](https://github.com/phockett/ePSdata/issues/new/choose).\n",
+    "- Figures may appear small due to HTML template constraints, but opening in a new window or downloading will provide the high-res source. (This will be fixed at some point in the future...)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
@@ -212,7 +236,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.3"
+   "version": "3.7.4"
   }
  },
  "nbformat": 4,

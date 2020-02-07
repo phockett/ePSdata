@@ -12,10 +12,9 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
  methods
  cite
 
-.. .. image:: http://femtolab.ca/wordpress/wp-content/uploads/2017/03/grav_box_img23164957.jpg
                 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: ABCO
    :glob:
 
@@ -23,7 +22,7 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
                        
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: DABCO
    :glob:
 
@@ -31,13 +30,16 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
                        
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: aniline
    :glob:
 
    aniline/*
 
                        
+
+.. image:: _figs/grav_box_img23164957.jpg
+
 Indices and tables
 ==================
 
