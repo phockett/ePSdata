@@ -1,7 +1,7 @@
 Citation
 ========
 
-If you make use of ePSdata results in your research, please cite as follows. (`Get the citations as a .bib file here. <cite_ePSdata.bib>`_)
+If you make use of ePSdata results in your research, please cite as follows. (`Get the citations as a .bib file here. <_files/cite_ePSdata.bib>`_)
 
 Dataset
 -------
