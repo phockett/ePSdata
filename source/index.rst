@@ -23,6 +23,14 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
                        
 .. toctree::
    :maxdepth: 1
+   :caption: CH3I
+   :glob:
+
+   CH3I/*
+
+                       
+.. toctree::
+   :maxdepth: 1
    :caption: DABCO
    :glob:
 
