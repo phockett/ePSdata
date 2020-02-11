@@ -861,7 +861,9 @@ Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=phaseUW, thres=1.41915116889408
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Calculate for each fie &amp; pol geom</span>
+<span></span><span class="c1"># Drop threshold for MF calcs</span>
+<span class="n">thres</span> <span class="o">=</span> <span class="mf">1e-3</span>
+<span class="c1"># Calculate for each fie &amp; pol geom</span>
 <span class="c1"># TODO - file logic, and parallelize</span>
 <span class="n">BLM</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dataMatE</span><span class="p">:</span>
@@ -888,7 +890,7 @@ Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=phaseUW, thres=1.41915116889408
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb30_E.inp.out_BLM-L_2020-01-28_09-39-28.nc&#39;]
+[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb30_E.inp.out_BLM-L_2020-02-10_09-08-11.nc&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -927,7 +929,7 @@ Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=phaseUW, thres=1.41915116889408
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.12341162927070058, with Seaborn
+Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.001017613059022104, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -1011,7 +1013,7 @@ Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.12341162927070058, w
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb30_E.inp.out_BLM-V_2020-01-28_09-39-28.nc&#39;]
+[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb30_E.inp.out_BLM-V_2020-02-10_09-08-11.nc&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1048,32 +1050,23 @@ Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.12341162927070058, w
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
+<div class="output_area docutils container">
 <div class="highlight"><pre>
-/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
-  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
+Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.001, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.1, with Seaborn
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_27_2.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_27_2.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_27_1.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_27_1.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_27_3.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_27_3.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_27_2.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_27_2.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1112,31 +1105,22 @@ Plotting data CH3I_1-60eV_orb30_E.inp.out, pType=a, thres=0.1, with Seaborn
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Differences, L vs. V gauge BLMs
-Max difference in BLMs (L-V): 0 (1.2341162927070057+0j)
-Plotting data (No filename), pType=a, thres=0.12341162927070058, with Seaborn
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
-  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
+Max difference in BLMs (L-V): 0 (0.332299981441156+2.9950448929007464e-17j)
+Plotting data (No filename), pType=a, thres=0.00033229998144115603, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_28_2.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_28_2.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_28_1.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_28_1.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_28_3.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_28_3.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb30_E_28_2.png" src="../_images/CH3I_CH3I_1-60eV_orb30_E_28_2.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1163,7 +1147,7 @@ Plotting data (No filename), pType=a, thres=0.12341162927070058, with Seaborn
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Machine tolerance:  2.220446049250313e-16
-Max imaginary value: 0 0.5301003606770819
+Max imaginary value: 0 0.5111423032385483
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1233,7 +1217,7 @@ Run:  2018-03-13  03:21:35.541 (GMT -0400)
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.4</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Jan 28 12:39:02 2020 EST</td></tr></table></div>
+<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.4</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Feb 11 13:31:20 2020 EST</td></tr></table></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
@@ -1251,7 +1235,7 @@ Run:  2018-03-13  03:21:35.541 (GMT -0400)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Run: 2020-01-28_09-39-28
+Run: 2020-02-10_09-08-11
 Host: jake
 </pre></div></div>
 </div>

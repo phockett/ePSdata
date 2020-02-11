@@ -861,7 +861,9 @@ Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=phaseUW, thres=1.00588427270062
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Calculate for each fie &amp; pol geom</span>
+<span></span><span class="c1"># Drop threshold for MF calcs</span>
+<span class="n">thres</span> <span class="o">=</span> <span class="mf">1e-3</span>
+<span class="c1"># Calculate for each fie &amp; pol geom</span>
 <span class="c1"># TODO - file logic, and parallelize</span>
 <span class="n">BLM</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dataMatE</span><span class="p">:</span>
@@ -888,7 +890,7 @@ Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=phaseUW, thres=1.00588427270062
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb21_E.inp.out_BLM-L_2020-01-28_09-39-12.nc&#39;]
+[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb21_E.inp.out_BLM-L_2020-02-10_09-07-55.nc&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -936,90 +938,21 @@ Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=phaseUW, thres=1.00588427270062
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.1, with Seaborn
+Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.0014657983544135115, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-13-02efc21ac5b1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span>                                                    thresType <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;pc&#39;</span><span class="ansi-blue-fg">,</span> thres <span class="ansi-blue-fg">=</span> thres<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span>                                                    plotDims <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Labels&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;l&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;m&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">---&gt; 14</span><span class="ansi-red-fg">                                                    figsize = (15,10))
-</span>
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/basicPlotters.py</span> in <span class="ansi-cyan-fg">lmPlot</span><span class="ansi-blue-fg">(data, pType, thres, thresType, SFflag, logFlag, eulerGroup, selDims, sumDims, plotDims, xDim, backend, cmap, figsize, verbose)</span>
-<span class="ansi-green-intense-fg ansi-bold">    507</span>                   linewidths<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> xticklabels<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">,</span> yticklabels<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    508</span>                   <span class="ansi-red-fg"># Some other additional, optional, args...</span>
-<span class="ansi-green-fg">--&gt; 509</span><span class="ansi-red-fg">                   figsize = figsize, cmap = cmap)
-</span><span class="ansi-green-intense-fg ansi-bold">    510</span>
-<span class="ansi-green-intense-fg ansi-bold">    511</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">clustermap</span><span class="ansi-blue-fg">(data, pivot_kws, method, metric, z_score, standard_scale, figsize, cbar_kws, row_cluster, col_cluster, row_linkage, col_linkage, row_colors, col_colors, mask, expected_size_dendrogram, expected_size_colors, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1349</span>                         row_cluster<span class="ansi-blue-fg">=</span>row_cluster<span class="ansi-blue-fg">,</span> col_cluster<span class="ansi-blue-fg">=</span>col_cluster<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1350</span>                         row_linkage<span class="ansi-blue-fg">=</span>row_linkage<span class="ansi-blue-fg">,</span> col_linkage<span class="ansi-blue-fg">=</span>col_linkage<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1351</span><span class="ansi-red-fg">                         **kwargs)
-</span>
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-fg">(self, metric, method, colorbar_kws, row_cluster, col_cluster, row_linkage, col_linkage, **kws)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1178</span>             yind <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>arange<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>data2d<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1179</span>
-<span class="ansi-green-fg">-&gt; 1180</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>plot_colors<span class="ansi-blue-fg">(</span>xind<span class="ansi-blue-fg">,</span> yind<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kws<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1181</span>         self<span class="ansi-blue-fg">.</span>plot_matrix<span class="ansi-blue-fg">(</span>colorbar_kws<span class="ansi-blue-fg">,</span> xind<span class="ansi-blue-fg">,</span> yind<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kws<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1182</span>         <span class="ansi-green-fg">return</span> self
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">plot_colors</span><span class="ansi-blue-fg">(self, xind, yind, **kws)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1107</span>
-<span class="ansi-green-intense-fg ansi-bold">   1108</span>             heatmap(matrix, cmap=cmap, cbar=False, ax=self.ax_row_colors,
-<span class="ansi-green-fg">-&gt; 1109</span><span class="ansi-red-fg">                     xticklabels=row_color_labels, yticklabels=False, **kws)
-</span><span class="ansi-green-intense-fg ansi-bold">   1110</span>
-<span class="ansi-green-intense-fg ansi-bold">   1111</span>             <span class="ansi-red-fg"># Adjust rotation of labels</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">heatmap</span><span class="ansi-blue-fg">(data, vmin, vmax, cmap, center, robust, annot, fmt, annot_kws, linewidths, linecolor, cbar, cbar_kws, cbar_ax, square, xticklabels, yticklabels, mask, ax, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    529</span>     plotter = _HeatMapper(data, vmin, vmax, cmap, center, robust, annot, fmt,
-<span class="ansi-green-intense-fg ansi-bold">    530</span>                           annot_kws<span class="ansi-blue-fg">,</span> cbar<span class="ansi-blue-fg">,</span> cbar_kws<span class="ansi-blue-fg">,</span> xticklabels<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 531</span><span class="ansi-red-fg">                           yticklabels, mask)
-</span><span class="ansi-green-intense-fg ansi-bold">    532</span>
-<span class="ansi-green-intense-fg ansi-bold">    533</span>     <span class="ansi-red-fg"># Add the pcolormesh kwargs here</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, data, vmin, vmax, cmap, center, robust, annot, fmt, annot_kws, cbar, cbar_kws, xticklabels, yticklabels, mask)</span>
-<span class="ansi-green-intense-fg ansi-bold">    179</span>         <span class="ansi-red-fg"># Determine good default values for the colormapping</span>
-<span class="ansi-green-intense-fg ansi-bold">    180</span>         self._determine_cmap_params(plot_data, vmin, vmax,
-<span class="ansi-green-fg">--&gt; 181</span><span class="ansi-red-fg">                                     cmap, center, robust)
-</span><span class="ansi-green-intense-fg ansi-bold">    182</span>
-<span class="ansi-green-intense-fg ansi-bold">    183</span>         <span class="ansi-red-fg"># Sort out the annotations</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">_determine_cmap_params</span><span class="ansi-blue-fg">(self, plot_data, vmin, vmax, cmap, center, robust)</span>
-<span class="ansi-green-intense-fg ansi-bold">    218</span>         calc_data <span class="ansi-blue-fg">=</span> plot_data<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">~</span>np<span class="ansi-blue-fg">.</span>isnan<span class="ansi-blue-fg">(</span>plot_data<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">    219</span>         <span class="ansi-green-fg">if</span> vmin <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 220</span><span class="ansi-red-fg">             </span>vmin <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>percentile<span class="ansi-blue-fg">(</span>calc_data<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> robust <span class="ansi-green-fg">else</span> calc_data<span class="ansi-blue-fg">.</span>min<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    221</span>         <span class="ansi-green-fg">if</span> vmax <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    222</span>             vmax <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>percentile<span class="ansi-blue-fg">(</span>calc_data<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">98</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> robust <span class="ansi-green-fg">else</span> calc_data<span class="ansi-blue-fg">.</span>max<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/numpy/core/_methods.py</span> in <span class="ansi-cyan-fg">_amin</span><span class="ansi-blue-fg">(a, axis, out, keepdims, initial, where)</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span> def _amin(a, axis=None, out=None, keepdims=False,
-<span class="ansi-green-intense-fg ansi-bold">     33</span>           initial=_NoValue, where=True):
-<span class="ansi-green-fg">---&gt; 34</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> umr_minimum<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> out<span class="ansi-blue-fg">,</span> keepdims<span class="ansi-blue-fg">,</span> initial<span class="ansi-blue-fg">,</span> where<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     35</span>
-<span class="ansi-green-intense-fg ansi-bold">     36</span> def _sum(a, axis=None, dtype=None, out=None, keepdims=False,
-
-<span class="ansi-red-fg">ValueError</span>: zero-size array to reduction operation minimum which has no identity
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_22_3.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_22_3.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_22_2.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_22_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_22_4.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_22_4.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_22_3.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_22_3.png" />
 </div>
 </div>
 </div>
@@ -1089,7 +1022,7 @@ Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.1, with Seaborn
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb21_E.inp.out_BLM-V_2020-01-28_09-39-12.nc&#39;]
+[&#39;Written to h5netcdf format&#39;, &#39;/home/paul/ePS_results/CH3I/CH3I_1-60eV/CH3I_1-60eV_orb21_E.inp.out_BLM-V_2020-02-10_09-07-55.nc&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1126,23 +1059,32 @@ Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.1, with Seaborn
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.1, with Seaborn
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:223: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_27_1.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_27_1.png" />
+<div class="highlight"><pre>
+Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.001, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_27_2.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_27_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_27_2.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_27_2.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_27_3.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_27_3.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1181,8 +1123,8 @@ Plotting data CH3I_1-60eV_orb21_E.inp.out, pType=a, thres=0.1, with Seaborn
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Differences, L vs. V gauge BLMs
-Max difference in BLMs (L-V): 0 (0.2807612448674696-1.8730396659633954e-17j)
-Plotting data (No filename), pType=a, thres=0.028076124486746963, with Seaborn
+Max difference in BLMs (L-V): 0 (1.6568988825472826-6.469023510136515e-17j)
+Plotting data (No filename), pType=a, thres=0.0016568988825472826, with Seaborn
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -1198,83 +1140,14 @@ Plotting data (No filename), pType=a, thres=0.028076124486746963, with Seaborn
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-18-b286e22fbd2b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     19</span>                                                        thresType <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;pc&#39;</span><span class="ansi-blue-fg">,</span> thres <span class="ansi-blue-fg">=</span> thres<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">     20</span>                                                        plotDims <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Labels&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;l&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;m&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">---&gt; 21</span><span class="ansi-red-fg">                                                        figsize = (15,10))
-</span>
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/basicPlotters.py</span> in <span class="ansi-cyan-fg">lmPlot</span><span class="ansi-blue-fg">(data, pType, thres, thresType, SFflag, logFlag, eulerGroup, selDims, sumDims, plotDims, xDim, backend, cmap, figsize, verbose)</span>
-<span class="ansi-green-intense-fg ansi-bold">    507</span>                   linewidths<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> xticklabels<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">,</span> yticklabels<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    508</span>                   <span class="ansi-red-fg"># Some other additional, optional, args...</span>
-<span class="ansi-green-fg">--&gt; 509</span><span class="ansi-red-fg">                   figsize = figsize, cmap = cmap)
-</span><span class="ansi-green-intense-fg ansi-bold">    510</span>
-<span class="ansi-green-intense-fg ansi-bold">    511</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">clustermap</span><span class="ansi-blue-fg">(data, pivot_kws, method, metric, z_score, standard_scale, figsize, cbar_kws, row_cluster, col_cluster, row_linkage, col_linkage, row_colors, col_colors, mask, expected_size_dendrogram, expected_size_colors, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1349</span>                         row_cluster<span class="ansi-blue-fg">=</span>row_cluster<span class="ansi-blue-fg">,</span> col_cluster<span class="ansi-blue-fg">=</span>col_cluster<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1350</span>                         row_linkage<span class="ansi-blue-fg">=</span>row_linkage<span class="ansi-blue-fg">,</span> col_linkage<span class="ansi-blue-fg">=</span>col_linkage<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1351</span><span class="ansi-red-fg">                         **kwargs)
-</span>
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-fg">(self, metric, method, colorbar_kws, row_cluster, col_cluster, row_linkage, col_linkage, **kws)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1178</span>             yind <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>arange<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>data2d<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1179</span>
-<span class="ansi-green-fg">-&gt; 1180</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>plot_colors<span class="ansi-blue-fg">(</span>xind<span class="ansi-blue-fg">,</span> yind<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kws<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1181</span>         self<span class="ansi-blue-fg">.</span>plot_matrix<span class="ansi-blue-fg">(</span>colorbar_kws<span class="ansi-blue-fg">,</span> xind<span class="ansi-blue-fg">,</span> yind<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kws<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1182</span>         <span class="ansi-green-fg">return</span> self
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">plot_colors</span><span class="ansi-blue-fg">(self, xind, yind, **kws)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1107</span>
-<span class="ansi-green-intense-fg ansi-bold">   1108</span>             heatmap(matrix, cmap=cmap, cbar=False, ax=self.ax_row_colors,
-<span class="ansi-green-fg">-&gt; 1109</span><span class="ansi-red-fg">                     xticklabels=row_color_labels, yticklabels=False, **kws)
-</span><span class="ansi-green-intense-fg ansi-bold">   1110</span>
-<span class="ansi-green-intense-fg ansi-bold">   1111</span>             <span class="ansi-red-fg"># Adjust rotation of labels</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">heatmap</span><span class="ansi-blue-fg">(data, vmin, vmax, cmap, center, robust, annot, fmt, annot_kws, linewidths, linecolor, cbar, cbar_kws, cbar_ax, square, xticklabels, yticklabels, mask, ax, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    529</span>     plotter = _HeatMapper(data, vmin, vmax, cmap, center, robust, annot, fmt,
-<span class="ansi-green-intense-fg ansi-bold">    530</span>                           annot_kws<span class="ansi-blue-fg">,</span> cbar<span class="ansi-blue-fg">,</span> cbar_kws<span class="ansi-blue-fg">,</span> xticklabels<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 531</span><span class="ansi-red-fg">                           yticklabels, mask)
-</span><span class="ansi-green-intense-fg ansi-bold">    532</span>
-<span class="ansi-green-intense-fg ansi-bold">    533</span>     <span class="ansi-red-fg"># Add the pcolormesh kwargs here</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, data, vmin, vmax, cmap, center, robust, annot, fmt, annot_kws, cbar, cbar_kws, xticklabels, yticklabels, mask)</span>
-<span class="ansi-green-intense-fg ansi-bold">    179</span>         <span class="ansi-red-fg"># Determine good default values for the colormapping</span>
-<span class="ansi-green-intense-fg ansi-bold">    180</span>         self._determine_cmap_params(plot_data, vmin, vmax,
-<span class="ansi-green-fg">--&gt; 181</span><span class="ansi-red-fg">                                     cmap, center, robust)
-</span><span class="ansi-green-intense-fg ansi-bold">    182</span>
-<span class="ansi-green-intense-fg ansi-bold">    183</span>         <span class="ansi-red-fg"># Sort out the annotations</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/epsproc/_sns_matrixMod.py</span> in <span class="ansi-cyan-fg">_determine_cmap_params</span><span class="ansi-blue-fg">(self, plot_data, vmin, vmax, cmap, center, robust)</span>
-<span class="ansi-green-intense-fg ansi-bold">    218</span>         calc_data <span class="ansi-blue-fg">=</span> plot_data<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">~</span>np<span class="ansi-blue-fg">.</span>isnan<span class="ansi-blue-fg">(</span>plot_data<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">    219</span>         <span class="ansi-green-fg">if</span> vmin <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 220</span><span class="ansi-red-fg">             </span>vmin <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>percentile<span class="ansi-blue-fg">(</span>calc_data<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> robust <span class="ansi-green-fg">else</span> calc_data<span class="ansi-blue-fg">.</span>min<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    221</span>         <span class="ansi-green-fg">if</span> vmax <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    222</span>             vmax <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>percentile<span class="ansi-blue-fg">(</span>calc_data<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">98</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> robust <span class="ansi-green-fg">else</span> calc_data<span class="ansi-blue-fg">.</span>max<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/numpy/core/_methods.py</span> in <span class="ansi-cyan-fg">_amin</span><span class="ansi-blue-fg">(a, axis, out, keepdims, initial, where)</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span> def _amin(a, axis=None, out=None, keepdims=False,
-<span class="ansi-green-intense-fg ansi-bold">     33</span>           initial=_NoValue, where=True):
-<span class="ansi-green-fg">---&gt; 34</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> umr_minimum<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> out<span class="ansi-blue-fg">,</span> keepdims<span class="ansi-blue-fg">,</span> initial<span class="ansi-blue-fg">,</span> where<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     35</span>
-<span class="ansi-green-intense-fg ansi-bold">     36</span> def _sum(a, axis=None, dtype=None, out=None, keepdims=False,
-
-<span class="ansi-red-fg">ValueError</span>: zero-size array to reduction operation minimum which has no identity
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_28_3.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_28_3.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_28_2.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_28_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_28_4.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_28_4.png" />
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_28_3.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_28_3.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1301,7 +1174,7 @@ Plotting data (No filename), pType=a, thres=0.028076124486746963, with Seaborn
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Machine tolerance:  2.220446049250313e-16
-Max imaginary value: 0 0.4214274442956148
+Max imaginary value: 0 0.4982700737784119
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -1317,72 +1190,8 @@ Max imaginary value: 0 0.4214274442956148
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-19-e2c2a9674016&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     BLMplot <span class="ansi-blue-fg">=</span> ep<span class="ansi-blue-fg">.</span>matEleSelector<span class="ansi-blue-fg">(</span>BLMplot<span class="ansi-blue-fg">,</span> thres<span class="ansi-blue-fg">=</span>thres<span class="ansi-blue-fg">,</span> dims <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Eke&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg">     </span>BLMplot<span class="ansi-blue-fg">.</span>imag<span class="ansi-blue-fg">.</span>squeeze<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">.</span>line<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Eke&#39;</span><span class="ansi-blue-fg">,</span> col<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Euler&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/plot/plot.py</span> in <span class="ansi-cyan-fg">line</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    471</span>     <span class="ansi-blue-fg">@</span>functools<span class="ansi-blue-fg">.</span>wraps<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    472</span>     <span class="ansi-green-fg">def</span> line<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 473</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> line<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_da<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    474</span>
-<span class="ansi-green-intense-fg ansi-bold">    475</span>     <span class="ansi-blue-fg">@</span>functools<span class="ansi-blue-fg">.</span>wraps<span class="ansi-blue-fg">(</span>step<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/plot/plot.py</span> in <span class="ansi-cyan-fg">line</span><span class="ansi-blue-fg">(darray, row, col, figsize, aspect, size, ax, hue, x, y, xincrease, yincrease, xscale, yscale, xticks, yticks, xlim, ylim, add_legend, _labels, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    278</span>         allargs<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>allargs<span class="ansi-blue-fg">.</span>pop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;kwargs&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    279</span>         allargs<span class="ansi-blue-fg">.</span>pop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;darray&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 280</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> _easy_facetgrid<span class="ansi-blue-fg">(</span>darray<span class="ansi-blue-fg">,</span> line<span class="ansi-blue-fg">,</span> kind<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;line&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>allargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    281</span>
-<span class="ansi-green-intense-fg ansi-bold">    282</span>     ndims <span class="ansi-blue-fg">=</span> len<span class="ansi-blue-fg">(</span>darray<span class="ansi-blue-fg">.</span>dims<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/plot/facetgrid.py</span> in <span class="ansi-cyan-fg">_easy_facetgrid</span><span class="ansi-blue-fg">(data, plotfunc, kind, x, y, row, col, col_wrap, sharex, sharey, aspect, size, subplot_kws, ax, figsize, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    617</span>         aspect<span class="ansi-blue-fg">=</span>aspect<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    618</span>         size<span class="ansi-blue-fg">=</span>size<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 619</span><span class="ansi-red-fg">         </span>subplot_kws<span class="ansi-blue-fg">=</span>subplot_kws<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    620</span>     )
-<span class="ansi-green-intense-fg ansi-bold">    621</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/plot/facetgrid.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, data, col, row, col_wrap, sharex, sharey, figsize, aspect, size, subplot_kws)</span>
-<span class="ansi-green-intense-fg ansi-bold">    113</span>
-<span class="ansi-green-intense-fg ansi-bold">    114</span>         <span class="ansi-red-fg"># Handle corner case of nonunique coordinates</span>
-<span class="ansi-green-fg">--&gt; 115</span><span class="ansi-red-fg">         </span>rep_col <span class="ansi-blue-fg">=</span> col <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> data<span class="ansi-blue-fg">[</span>col<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>to_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>is_unique
-<span class="ansi-green-intense-fg ansi-bold">    116</span>         rep_row <span class="ansi-blue-fg">=</span> row <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">and</span> <span class="ansi-green-fg">not</span> data<span class="ansi-blue-fg">[</span>row<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>to_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>is_unique
-<span class="ansi-green-intense-fg ansi-bold">    117</span>         <span class="ansi-green-fg">if</span> rep_col <span class="ansi-green-fg">or</span> rep_row<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/dataarray.py</span> in <span class="ansi-cyan-fg">to_index</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    580</span>         arrays<span class="ansi-blue-fg">.</span>
-<span class="ansi-green-intense-fg ansi-bold">    581</span>         &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 582</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>variable<span class="ansi-blue-fg">.</span>to_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    583</span>
-<span class="ansi-green-intense-fg ansi-bold">    584</span>     <span class="ansi-blue-fg">@</span>property
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/variable.py</span> in <span class="ansi-cyan-fg">to_index</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    459</span>     <span class="ansi-green-fg">def</span> to_index<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    460</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Convert this variable to a pandas.Index&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; 461</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>to_index_variable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>to_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    462</span>
-<span class="ansi-green-intense-fg ansi-bold">    463</span>     <span class="ansi-green-fg">def</span> to_dict<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/variable.py</span> in <span class="ansi-cyan-fg">to_index_variable</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    452</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Return this variable as an xarray.IndexVariable&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    453</span>         return IndexVariable(
-<span class="ansi-green-fg">--&gt; 454</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>dims<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_data<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_attrs<span class="ansi-blue-fg">,</span> encoding<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>_encoding<span class="ansi-blue-fg">,</span> fastpath<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span>
-<span class="ansi-green-intense-fg ansi-bold">    455</span>         )
-<span class="ansi-green-intense-fg ansi-bold">    456</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/variable.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, dims, data, attrs, encoding, fastpath)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1956</span>         super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__init__<span class="ansi-blue-fg">(</span>dims<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">,</span> attrs<span class="ansi-blue-fg">,</span> encoding<span class="ansi-blue-fg">,</span> fastpath<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1957</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>ndim <span class="ansi-blue-fg">!=</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1958</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;%s objects must be 1-dimensional&#34;</span> <span class="ansi-blue-fg">%</span> type<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__name__<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1959</span>
-<span class="ansi-green-intense-fg ansi-bold">   1960</span>         <span class="ansi-red-fg"># Unlike in Variable, always eagerly load values into memory</span>
-
-<span class="ansi-red-fg">ValueError</span>: IndexVariable objects must be 1-dimensional
-</pre></div></div>
+<img alt="../_images/CH3I_CH3I_1-60eV_orb21_E_29_2.png" src="../_images/CH3I_CH3I_1-60eV_orb21_E_29_2.png" />
+</div>
 </div>
 </div>
 <div class="section" id="Version-info">
@@ -1444,7 +1253,7 @@ Run:  2019-02-11  12:14:15.125 (GMT -0500)
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.4</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Jan 28 10:08:12 2020 EST</td></tr></table></div>
+<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.5 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.9.0</td></tr><tr><td>OS</td><td>Linux 5.0.0 36 generic x86_64 with debian buster sid</td></tr><tr><td>epsproc</td><td>1.2.4</td></tr><tr><td>xarray</td><td>0.14.0</td></tr><tr><td colspan='2'>Tue Feb 11 03:44:38 2020 EST</td></tr></table></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
@@ -1462,7 +1271,7 @@ Run:  2019-02-11  12:14:15.125 (GMT -0500)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Run: 2020-01-28_09-39-12
+Run: 2020-02-10_09-07-55
 Host: jake
 </pre></div></div>
 </div>
