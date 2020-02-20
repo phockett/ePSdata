@@ -129,6 +129,15 @@
 <li class="toctree-l1"><a class="reference internal" href="DABCO/DABCO_1-50.0eV_orb30_A2PP.html">ePSproc: DABCO, HOMO-1 ionization (orb 30, A2PP), 1 - 50eV</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DABCO/DABCO_1-50.0eV_orb31_A1P.html">ePSproc: DABCO, HOMO ionization (orb 31, A1P), 1 - 50eV</a></li>
 </ul>
+<p class="caption"><span class="caption-text">XeF2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb12_A1G.html">ePSproc: xef2 wavefn run, orb 12 ioinzation (Iodine 3d, A1G/SG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb13_E1G.html">ePSproc: xef2 wavefn run, orb 13 ioinzation (Iodine 3d, E1G/PG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb15_E2G.html">ePSproc: xef2 wavefn run, orb 15 ioinzation (Iodine 3d, E2G/DG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb21_A1G.html">ePSproc: xef2 wavefn test run, orb 21 ioinzation (Iodine 4d, A1G/SG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb22_E1G.html">ePSproc: xef2 wavefn test run, orb 22 ioinzation (Iodine 4d, E1G/PG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb24_E2G.html">ePSproc: xef2 wavefn test run, orb 24 ioinzation (Iodine 4d, E2G/DG), 1-60eV</a></li>
+</ul>
 <p class="caption"><span class="caption-text">aniline</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">ePSproc: Aniline Orb 23 (B1) ionization</a></li>
@@ -292,7 +301,7 @@
 <div class="section" id="Workflow">
 <h2>Workflow<a class="headerlink" href="#Workflow" title="Permalink to this headline">¶</a></h2>
 <p>The general workflow for photoionization calculations plus post-processing is shown below. This pipeline involves a range of code suites, as shown in the main workflow; some additional details are also illustrated.</p>
-<p><img alt="ePS_workflow" src="_images/ePSworkflow_060220.gv.png" /></p>
+<p><img alt="ePS_workflow" src="_images/ePSworkflow_170220.gv.png" /></p>
 <p>The basic ePSproc workflow (from the <a class="reference external" href="(https://www.authorea.com/users/71114/articles/122402/_show_article)">original software metapaper</a> is shown below: essentially, the ePS output file is parsed for photoionization matrix elements, and ancillary data; the matrix elements are the used to calculate properties of interest, such as photoionziation cross-sections and MF-PADs. For ePSdata, this workflow is applied to each ePS dataset, with a Jupyter notebook as a template. The completed analysis &amp;
 dataset is then uploaded to Zenodo, and HTML version to ePSdata.</p>
 <p><img alt="ePSproc workflow" src="https://www.authorea.com/users/71114/articles/122402/master/file/figures/ePSproc_workflow_fig_040816/ePSproc_workflow_fig_040816.png" /></p>
@@ -319,7 +328,7 @@ dataset is then uploaded to Zenodo, and HTML version to ePSdata.</p>
 <li><p>Sharing and disemination of computational results and data, which would not otherwise be subject to “traditional” publication, and just sit on a hard-drive.</p></li>
 <li><p>General good scientific practice and open science…</p></li>
 </ul>
-<p><img alt="Quantum metrology schema" src="_images/QM_unified_schema_130220.gv.png" /></p>
+<p>Platform development for quantum metrology with photoelectrons: figures below show existing and new platform schematics. In the former case, theory and experiment are treated separately, and compared at the level of observables; in the latter lower-level comparisons are possible and aid analysis. <img alt="Existing platform schema" src="_images/photoionization_theory_expt_290120.gv.png" /> <img alt="Quantum metrology platform schema" src="_images/QM_unified_schema_130220.gv.png" /></p>
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/223603377" width="640" height="360" frameborder="0" allowfullscreen></iframe></div>
 <div class="section" id="Science-policy/open-science">
 <h3>Science policy/open science<a class="headerlink" href="#Science-policy/open-science" title="Permalink to this headline">¶</a></h3>

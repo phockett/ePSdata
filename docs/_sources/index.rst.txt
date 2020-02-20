@@ -39,6 +39,14 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
                        
 .. toctree::
    :maxdepth: 1
+   :caption: XeF2
+   :glob:
+
+   XeF2/*
+
+                       
+.. toctree::
+   :maxdepth: 1
    :caption: aniline
    :glob:
 
