@@ -12,7 +12,7 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
  methods
  cite
 
-                
+
 .. toctree::
    :maxdepth: 1
    :caption: ABCO
@@ -20,7 +20,15 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
    ABCO/*
 
-                       
+
+.. toctree::
+   :maxdepth: 1
+   :caption: C2H4
+   :glob:
+
+   C2H4/*
+
+
 .. toctree::
    :maxdepth: 1
    :caption: CH3I
@@ -28,7 +36,7 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
    CH3I/*
 
-                       
+
 .. toctree::
    :maxdepth: 1
    :caption: DABCO
@@ -36,7 +44,7 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
    DABCO/*
 
-                       
+
 .. toctree::
    :maxdepth: 1
    :caption: XeF2
@@ -44,7 +52,7 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
    XeF2/*
 
-                       
+
 .. toctree::
    :maxdepth: 1
    :caption: aniline
@@ -52,7 +60,7 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
    aniline/*
 
-                       
+
 
 .. image:: _figs/grav_box_img23164957.jpg
 
@@ -62,4 +70,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-                    
