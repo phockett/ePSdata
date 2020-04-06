@@ -23,18 +23,18 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
 .. toctree::
    :maxdepth: 1
-   :caption: C2H4
+   :caption: C2H4_1.0-100.0eV
    :glob:
 
-   C2H4/*
+   C2H4_1.0-100.0eV/*
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: CH3I
+   :caption: CH3I_1-60eV
    :glob:
 
-   CH3I/*
+   CH3I_1-60eV/*
 
 
 .. toctree::
@@ -51,6 +51,14 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
    :glob:
 
    XeF2/*
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: XeF2-preliminary
+   :glob:
+
+   XeF2-preliminary/*
 
 
 .. toctree::
