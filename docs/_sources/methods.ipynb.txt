@@ -1,0 +1,145 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Methods\n",
+    "07/02/20"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Each notebook on ePSdata shows various aspects of the results from an ePolyScat computation. The main sections of the notebooks are self-describing. Some additional details on the methods used are given here."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- For more infomation on the ePolyScat results, see the [ePS manual](https://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual), and refs. therein.\n",
+    "- Additional computations make use of [ePSproc codes](https://epsproc.readthedocs.io/en/latest/about.html), and the ePS matrix elements, to compute values such as $\\beta_{L,M}$ for molecular and lab frames.\n",
+    "- For more information on plotting methods, see the [`ep.lmPlot` demo](https://epsproc.readthedocs.io/en/latest/demos/ePSproc_demo_matE_plotting_Feb2020.html)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Formalism"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "ePolyScat matrix elements:\n",
+    "\n",
+    "\\begin{equation}\n",
+    "I_{l,m,\\mu}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(E)=\\langle\\Psi_{i}^{p_{i},\\mu_{i}}|\\hat{d_{\\mu}}|\\Psi_{f}^{p_{f},\\mu_{f}}\\varphi_{klm}^{(-)}\\rangle\\label{eq:I}\n",
+    "\\end{equation}\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "MFPADs are given by:\n",
+    "\n",
+    "\\begin{equation}\n",
+    "T_{\\mu_{0}}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(\\theta_{\\hat{k}},\\phi_{\\hat{k}},\\theta_{\\hat{n}},\\phi_{\\hat{n}})=\\sum_{l,m,\\mu}I_{l,m,\\mu}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(E)Y_{lm}^{*}(\\theta_{\\hat{k}},\\phi_{\\hat{k}})D_{\\mu,\\mu_{0}}^{1}(R_{\\hat{n}})\\label{eq:TMF}\n",
+    "\\end{equation}\n",
+    "\n",
+    "\\begin{equation}\n",
+    "I_{\\mu_{0}}(\\theta_{\\hat{k}},\\phi_{\\hat{k}},\\theta_{\\hat{n}},\\phi_{\\hat{n}})=\\frac{4\\pi^{2}E}{cg_{p_{i}}}\\sum_{\\mu_{i},\\mu_{f}}|T_{\\mu_{0}}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(\\theta_{\\hat{k}},\\phi_{\\hat{k}},\\theta_{\\hat{n}},\\phi_{\\hat{n}})|^{2}\\label{eq:MFPAD}\n",
+    "\\end{equation}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In this formalism:\n",
+    "\n",
+    "- $I_{l,m,\\mu}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(E)$ is the radial part of\n",
+    "the dipole matrix element, determined from the initial and final state\n",
+    "electronic wavefunctions $\\Psi_{i}^{p_{i},\\mu_{i}}$and $\\Psi_{f}^{p_{f},\\mu_{f}}$,\n",
+    "photoelectron wavefunction $\\varphi_{klm}^{(-)}$ and dipole operator\n",
+    "$\\hat{d_{\\mu}}$. Here the wavefunctions are indexed by irreducible\n",
+    "representation (i.e. symmetry) by the labels $p_{i}$ and $p_{f}$,\n",
+    "with components $\\mu_{i}$ and $\\mu_{f}$ respectively; $l,m$ are\n",
+    "angular momentum components, $\\mu$ is the projection of the polarization\n",
+    "into the MF (from a value $\\mu_{0}$ in the LF). Each energy and irreducible\n",
+    "representation corresponds to a calculation in ePolyScat.\n",
+    "- $T_{\\mu_{0}}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(\\theta_{\\hat{k}},\\phi_{\\hat{k}},\\theta_{\\hat{n}},\\phi_{\\hat{n}})$\n",
+    "is the full matrix element (expanded in polar coordinates) in the\n",
+    "MF, where $\\hat{k}$ denotes the direction of the photoelectron $\\mathbf{k}$-vector,\n",
+    "and $\\hat{n}$ the direction of the polarization vector $\\mathbf{n}$\n",
+    "of the ionizing light. Note that the summation over components $\\{l,m,\\mu\\}$\n",
+    "is coherent, and hence phase sensitive.\n",
+    "- $Y_{lm}^{*}(\\theta_{\\hat{k}},\\phi_{\\hat{k}})$ is a spherical harmonic.\n",
+    "- $D_{\\mu,\\mu_{0}}^{1}(R_{\\hat{n}})$ is a Wigner rotation matrix element,\n",
+    "with a set of Euler angles $R_{\\hat{n}}=(\\phi_{\\hat{n}},\\theta_{\\hat{n}},\\chi_{\\hat{n}})$,\n",
+    "which rotates/projects the polarization into the MF .\n",
+    "- $I_{\\mu_{0}}(\\theta_{\\hat{k}},\\phi_{\\hat{k}},\\theta_{\\hat{n}},\\phi_{\\hat{n}})$\n",
+    "is the final (observable) MFPAD, for a polarization $\\mu_{0}$ and\n",
+    "summed over all symmetry components of the initial and final states,\n",
+    "$\\mu_{i}$ and $\\mu_{f}$. Note that this sum can be expressed as\n",
+    "an incoherent summation, since these components are (by definition)\n",
+    "orthogonal.\n",
+    "- $g_{p_{i}}$ is the degeneracy of the state $p_{i}$.\n",
+    "\n",
+    "See: Toffoli, D., Lucchese, R. R., Lebech, M., Houver, J. C., & Dowek, D. (2007). Molecular frame and recoil frame photoelectron angular distributions from dissociative photoionization of NO2. The Journal of Chemical Physics, 126(5), 054307. https://doi.org/10.1063/1.2432124"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "From the matrix elements other quantities can be computed. The $\\beta_{L,M}$ parameters (MF) are defined as:\n",
+    "\n",
+    "\\begin{eqnarray}\n",
+    "\\beta_{L,-M}^{\\mu_{i},\\mu_{f}} & = & \\sum_{l,m,\\mu}\\sum_{l',m',\\mu'}(-1)^{M}(-1)^{m}(-1)^{(\\mu'-\\mu_{0})}\\left(\\frac{(2l+1)(2l'+1)(2L+1)}{4\\pi}\\right)^{1/2}\\left(\\begin{array}{ccc}\n",
+    "l & l' & L\\\\\n",
+    "0 & 0 & 0\n",
+    "\\end{array}\\right)\\left(\\begin{array}{ccc}\n",
+    "l & l' & L\\\\\n",
+    "-m & m' & -M\n",
+    "\\end{array}\\right)\\nonumber \\\\\n",
+    " & \\times & \\sum_{P,R',R}(2P+1)(-1)^{(R'-R)}\\left(\\begin{array}{ccc}\n",
+    "1 & 1 & P\\\\\n",
+    "\\mu & -\\mu' & R'\n",
+    "\\end{array}\\right)\\left(\\begin{array}{ccc}\n",
+    "1 & 1 & P\\\\\n",
+    "\\mu_{0} & -\\mu_{0} & R\n",
+    "\\end{array}\\right)D_{-R',-R}^{P}(R_{\\hat{n}})I_{l,m,\\mu}^{p_{i}\\mu_{i},p_{f}\\mu_{f}}(E)I_{l',m',\\mu'}^{p_{i}\\mu_{i},p_{f}\\mu_{f}*}(E)\n",
+    "\\end{eqnarray}\n",
+    "\n",
+    "See [the ePSproc docs on `ep.mfblm()`](https://epsproc.readthedocs.io/en/latest/modules/epsproc.MFBLM.html) for further details, and [this demo notebook](https://epsproc.readthedocs.io/en/latest/demos/ePSproc_BLM_calc_demo_Sept2019.html)."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

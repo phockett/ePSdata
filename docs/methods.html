@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Methods &mdash; ePSdata 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Citation" href="cite.html" />
+    <link rel="prev" title="About ePSdata" href="about.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> ePSdata
+          
+
+          
+            
+            <img src="_static/ePSproc_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About ePSdata</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Formalism">Formalism</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cite.html">Citation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABCO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ABCO/ABCO_0.01-5.01eV_orb31_A1.html">ePSproc: ABCO wavefn run, HOMO ioinzation (A1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ABCO/ABCO_1-50eV_orb30_E.html">ePSproc: ABCO HOMO-1 (orb 30) ioinzation (E) 1-50eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ABCO/ABCO_1-50eV_orb31_A1.html">ePSproc: ABCO HOMO (orb 31) ioinzation (A1) 1-50eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">C2H4_1.0-100.0eV</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb1_Ag.html">ePSproc: Ethylene (C2H4), orb 1 ionization (Ag), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb2_B1u.html">ePSproc: Ethylene (C2H4), orb 2 ionization (B1u), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb3_Ag.html">ePSproc: Ethylene (C2H4), orb 3 ionization (Ag), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb4_B1u.html">ePSproc: Ethylene (C2H4), orb 4 ionization (B1u), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb6_Ag.html">ePSproc: Ethylene (C2H4), orb 6 (HOMO-2) ionization (Ag), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb7_B3g.html">ePSproc: Ethylene (C2H4), orb 7 (HOMO-1) ionization (B3g), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb8_B3u.html">ePSproc: Ethylene (C2H4), orb 8 (HOMO) ionization (B3u), wavefn run, 1.0:2.5:100.0</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CH3I_1-60eV</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb10_A1.html">ePSproc: CH3I wavefn test run, orb 10 ioinzation (Iodine 3d, A1), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb11_E.html">ePSproc: CH3I wavefn test run, orb 11 ioinzation (Iodine 3d, E), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb13_E.html">ePSproc: CH3I wavefn test run, orb 13 ioinzation (Iodine 3d, E xy), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb20_A1.html">ePSproc: CH3I wavefn run, orb 20 ionization (Iodine 4d, A1), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb21_E.html">ePSproc: CH3I wavefn test run, orb 21 ioinzation (Iodine 4d, E), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb23_E.html">ePSproc: CH3I wavefn test run, orb 23 ioinzation (Iodine 4d, E), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb29_A1.html">ePSproc: CH3I wavefn test run, orb 29 ioinzation (sigma bonding, A1), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CH3I_1-60eV/CH3I_1-60eV_orb30_E.html">ePSproc: CH3I wavefn test run, orb 30 ioinzation (pi anti-bonding), 1 - 60 eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">DABCO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DABCO/DABCO_0.01-5.01eV_orb31_A1P.html">ePSproc: DABCO wavefn run, HOMO ionization (orb 31 A1P), 0.05 - 5.01eV high res</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DABCO/DABCO_0.5-10.5eV_orb31_A1P.html">ePSproc: DABCO, HOMO ioinzation (orb 31 A1P), 0.5 - 10.5eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DABCO/DABCO_1-50.0eV_orb30_A2PP.html">ePSproc: DABCO, HOMO-1 ionization (orb 30, A2PP), 1 - 50eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DABCO/DABCO_1-50.0eV_orb31_A1P.html">ePSproc: DABCO, HOMO ionization (orb 31, A1P), 1 - 50eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">XeF2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb12_A1G.html">ePSproc: xef2 wavefn run, orb 12 ioinzation (Iodine 3d, A1G/SG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb13_E1G.html">ePSproc: xef2 wavefn run, orb 13 ioinzation (Iodine 3d, E1G/PG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb15_E2G.html">ePSproc: xef2 wavefn run, orb 15 ioinzation (Iodine 3d, E2G/DG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb21_A1G.html">ePSproc: xef2 wavefn test run, orb 21 ioinzation (Iodine 4d, A1G/SG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb22_E1G.html">ePSproc: xef2 wavefn test run, orb 22 ioinzation (Iodine 4d, E1G/PG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2/xef2_1.0-60.1eV_orb24_E2G.html">ePSproc: xef2 wavefn test run, orb 24 ioinzation (Iodine 4d, E2G/DG), 1-60eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">XeF2-preliminary</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="XeF2-preliminary/XeF2_highRes_wf.orb21_A1G.html">XeF2 (4d sigma, orb21 A1G/SG), 1-350eV Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2-preliminary/XeF2_highRes_wf.orb22_E1G.html">XeF2 (4d pi, orb22-23 E1G/PG), 1-350eV Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2-preliminary/XeF2_highRes_wf.orb24_E2G.html">XeF2 (4d delta, orb24-25, E2G/DG), 1-350eV Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2-preliminary/XeF2_multi-orb_comparisons_270320-dist.html">XeF2 1 - 300eV Multi-orb processing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">aniline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">ePSproc: Aniline Orb 23 (B1) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb24_A2.html">ePSproc: Aniline Orb 24 (A2) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aniline/aniline_wf_0.1-10.1eV_orb33_A2.html">ePSproc: Aniline Orb 33 (A2) ionization</a></li>
+</ul>
+<p class="caption"><span class="caption-text">naphthalene-preliminary</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb33-45_S1.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb34.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb34-42_S1.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb34-45_S2.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ePSdata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Methods</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/methods.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">This page was auto-generated from a Jupyter notebook: <a class="reference external" href="https://github.com/phockett/ePSdata/blob/master/source/methods.ipynb">methods</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><ul>
+<li><p><a class="reference external" href="https://phockett.github.io/ePSdata/about.html">About ePSdata</a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference external" href="#Cite-this-dataset">Cite this dataset</a>.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>Problems?  Please raise <a class="reference external" href="https://github.com/phockett/ePSdata/issues/new/choose">any issues on Github</a>.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="Methods">
+<h1>Methods<a class="headerlink" href="#Methods" title="Permalink to this headline">¶</a></h1>
+<p>07/02/20</p>
+<p>Each notebook on ePSdata shows various aspects of the results from an ePolyScat computation. The main sections of the notebooks are self-describing. Some additional details on the methods used are given here.</p>
+<ul class="simple">
+<li><p>For more infomation on the ePolyScat results, see the <a class="reference external" href="https://www.chem.tamu.edu/rgroup/lucchese/ePolyScat.E3.manual">ePS manual</a>, and refs. therein.</p></li>
+<li><p>Additional computations make use of <a class="reference external" href="https://epsproc.readthedocs.io/en/latest/about.html">ePSproc codes</a>, and the ePS matrix elements, to compute values such as <span class="math notranslate nohighlight">\(\beta_{L,M}\)</span> for molecular and lab frames.</p></li>
+<li><p>For more information on plotting methods, see the <code class="docutils literal notranslate"><span class="pre">`ep.lmPlot</span></code> demo &lt;<a class="reference external" href="https://epsproc.readthedocs.io/en/latest/demos/ePSproc_demo_matE_plotting_Feb2020.html">https://epsproc.readthedocs.io/en/latest/demos/ePSproc_demo_matE_plotting_Feb2020.html</a>&gt;`__.</p></li>
+</ul>
+<div class="section" id="Formalism">
+<h2>Formalism<a class="headerlink" href="#Formalism" title="Permalink to this headline">¶</a></h2>
+<p>ePolyScat matrix elements:</p>
+<p><span class="math">\begin{equation}
+I_{l,m,\mu}^{p_{i}\mu_{i},p_{f}\mu_{f}}(E)=\langle\Psi_{i}^{p_{i},\mu_{i}}|\hat{d_{\mu}}|\Psi_{f}^{p_{f},\mu_{f}}\varphi_{klm}^{(-)}\rangle\label{eq:I}
+\end{equation}</span></p>
+<p>MFPADs are given by:</p>
+<p><span class="math">\begin{equation}
+T_{\mu_{0}}^{p_{i}\mu_{i},p_{f}\mu_{f}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})=\sum_{l,m,\mu}I_{l,m,\mu}^{p_{i}\mu_{i},p_{f}\mu_{f}}(E)Y_{lm}^{*}(\theta_{\hat{k}},\phi_{\hat{k}})D_{\mu,\mu_{0}}^{1}(R_{\hat{n}})\label{eq:TMF}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+I_{\mu_{0}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})=\frac{4\pi^{2}E}{cg_{p_{i}}}\sum_{\mu_{i},\mu_{f}}|T_{\mu_{0}}^{p_{i}\mu_{i},p_{f}\mu_{f}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})|^{2}\label{eq:MFPAD}
+\end{equation}</span></p>
+<p>In this formalism:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I_{l,m,\mu}^{p_{i}\mu_{i},p_{f}\mu_{f}}(E)\)</span> is the radial part of the dipole matrix element, determined from the initial and final state electronic wavefunctions <span class="math notranslate nohighlight">\(\Psi_{i}^{p_{i},\mu_{i}}\)</span>and <span class="math notranslate nohighlight">\(\Psi_{f}^{p_{f},\mu_{f}}\)</span>, photoelectron wavefunction <span class="math notranslate nohighlight">\(\varphi_{klm}^{(-)}\)</span> and dipole operator <span class="math notranslate nohighlight">\(\hat{d_{\mu}}\)</span>. Here the wavefunctions are indexed by irreducible representation (i.e. symmetry) by the labels <span class="math notranslate nohighlight">\(p_{i}\)</span> and <span class="math notranslate nohighlight">\(p_{f}\)</span>, with components
+<span class="math notranslate nohighlight">\(\mu_{i}\)</span> and <span class="math notranslate nohighlight">\(\mu_{f}\)</span> respectively; <span class="math notranslate nohighlight">\(l,m\)</span> are angular momentum components, <span class="math notranslate nohighlight">\(\mu\)</span> is the projection of the polarization into the MF (from a value <span class="math notranslate nohighlight">\(\mu_{0}\)</span> in the LF). Each energy and irreducible representation corresponds to a calculation in ePolyScat.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{\mu_{0}}^{p_{i}\mu_{i},p_{f}\mu_{f}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})\)</span> is the full matrix element (expanded in polar coordinates) in the MF, where <span class="math notranslate nohighlight">\(\hat{k}\)</span> denotes the direction of the photoelectron <span class="math notranslate nohighlight">\(\mathbf{k}\)</span>-vector, and <span class="math notranslate nohighlight">\(\hat{n}\)</span> the direction of the polarization vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> of the ionizing light. Note that the summation over components <span class="math notranslate nohighlight">\(\{l,m,\mu\}\)</span> is coherent, and hence phase sensitive.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Y_{lm}^{*}(\theta_{\hat{k}},\phi_{\hat{k}})\)</span> is a spherical harmonic.</p></li>
+<li><p><span class="math notranslate nohighlight">\(D_{\mu,\mu_{0}}^{1}(R_{\hat{n}})\)</span> is a Wigner rotation matrix element, with a set of Euler angles <span class="math notranslate nohighlight">\(R_{\hat{n}}=(\phi_{\hat{n}},\theta_{\hat{n}},\chi_{\hat{n}})\)</span>, which rotates/projects the polarization into the MF .</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_{\mu_{0}}(\theta_{\hat{k}},\phi_{\hat{k}},\theta_{\hat{n}},\phi_{\hat{n}})\)</span> is the final (observable) MFPAD, for a polarization <span class="math notranslate nohighlight">\(\mu_{0}\)</span> and summed over all symmetry components of the initial and final states, <span class="math notranslate nohighlight">\(\mu_{i}\)</span> and <span class="math notranslate nohighlight">\(\mu_{f}\)</span>. Note that this sum can be expressed as an incoherent summation, since these components are (by definition) orthogonal.</p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{p_{i}}\)</span> is the degeneracy of the state <span class="math notranslate nohighlight">\(p_{i}\)</span>.</p></li>
+</ul>
+<p>See: Toffoli, D., Lucchese, R. R., Lebech, M., Houver, J. C., &amp; Dowek, D. (2007). Molecular frame and recoil frame photoelectron angular distributions from dissociative photoionization of NO2. The Journal of Chemical Physics, 126(5), 054307. <a class="reference external" href="https://doi.org/10.1063/1.2432124">https://doi.org/10.1063/1.2432124</a></p>
+<p>From the matrix elements other quantities can be computed. The <span class="math notranslate nohighlight">\(\beta_{L,M}\)</span> parameters (MF) are defined as:</p>
+<p>:nbsphinx-math:<a href="#id2"><span class="problematic" id="id3">`</span></a>begin{eqnarray}
+beta_{L,-M}^{mu_{i},mu_{f}} &amp; = &amp; sum_{l,m,mu}sum_{l’,m’,mu’}(-1)^{M}(-1)^{m}(-1)^{(mu’-mu_{0})}left(frac{(2l+1)(2l’+1)(2L+1)}{4pi}right)^{1/2}left(begin{array}{ccc}
+l &amp; l’ &amp; L\
+0 &amp; 0 &amp; 0
+end{array}right)left(begin{array}{ccc}
+l &amp; l’ &amp; L\
+-m &amp; m’ &amp; -M
+end{array}right)nonumber \</p>
+<blockquote>
+<div><p>&amp; times &amp; sum_{P,R’,R}(2P+1)(-1)^{(R’-R)}left(begin{array}{ccc}</p>
+</div></blockquote>
+<p>1 &amp; 1 &amp; P\
+mu &amp; -mu’ &amp; R’
+end{array}right)left(begin{array}{ccc}
+1 &amp; 1 &amp; P\
+mu_{0} &amp; -mu_{0} &amp; R
+end{array}right)D_{-R’,-R}^{P}(R_{hat{n}})I_{l,m,mu}^{p_{i}mu_{i},p_{f}mu_{f}}(E)I_{l’,m’,mu’}^{p_{i}mu_{i},p_{f}mu_{f}*}(E)
+end{eqnarray}`</p>
+<p>See <cite>the ePSproc docs on ``ep.mfblm()`</cite> &lt;<a class="reference external" href="https://epsproc.readthedocs.io/en/latest/modules/epsproc.MFBLM.html">https://epsproc.readthedocs.io/en/latest/modules/epsproc.MFBLM.html</a>&gt;`__ for further details, and <a class="reference external" href="https://epsproc.readthedocs.io/en/latest/demos/ePSproc_BLM_calc_demo_Sept2019.html">this demo notebook</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cite.html" class="btn btn-neutral float-right" title="Citation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="about.html" class="btn btn-neutral float-left" title="About ePSdata" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Paul Hockett
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

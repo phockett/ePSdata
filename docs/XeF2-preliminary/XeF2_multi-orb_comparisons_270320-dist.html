@@ -1,0 +1,2711 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>XeF2 1 - 300eV Multi-orb processing &mdash; ePSdata 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ePSproc: Aniline Orb 23 (B1) ionization" href="../aniline/aniline_wf_0.1-10.1eV_orb23_B1.html" />
+    <link rel="prev" title="XeF2 (4d delta, orb24-25, E2G/DG), 1-350eV Preliminary" href="XeF2_highRes_wf.orb24_E2G.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ePSdata
+          
+
+          
+            
+            <img src="../_static/ePSproc_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Intro:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About ePSdata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">Citation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABCO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ABCO/ABCO_0.01-5.01eV_orb31_A1.html">ePSproc: ABCO wavefn run, HOMO ioinzation (A1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ABCO/ABCO_1-50eV_orb30_E.html">ePSproc: ABCO HOMO-1 (orb 30) ioinzation (E) 1-50eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ABCO/ABCO_1-50eV_orb31_A1.html">ePSproc: ABCO HOMO (orb 31) ioinzation (A1) 1-50eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">C2H4_1.0-100.0eV</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb1_Ag.html">ePSproc: Ethylene (C2H4), orb 1 ionization (Ag), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb2_B1u.html">ePSproc: Ethylene (C2H4), orb 2 ionization (B1u), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb3_Ag.html">ePSproc: Ethylene (C2H4), orb 3 ionization (Ag), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb4_B1u.html">ePSproc: Ethylene (C2H4), orb 4 ionization (B1u), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb6_Ag.html">ePSproc: Ethylene (C2H4), orb 6 (HOMO-2) ionization (Ag), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb7_B3g.html">ePSproc: Ethylene (C2H4), orb 7 (HOMO-1) ionization (B3g), wavefn run, 1.0:2.5:100.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C2H4_1.0-100.0eV/C2H4_1.0-100.0eV_orb8_B3u.html">ePSproc: Ethylene (C2H4), orb 8 (HOMO) ionization (B3u), wavefn run, 1.0:2.5:100.0</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CH3I_1-60eV</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb10_A1.html">ePSproc: CH3I wavefn test run, orb 10 ioinzation (Iodine 3d, A1), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb11_E.html">ePSproc: CH3I wavefn test run, orb 11 ioinzation (Iodine 3d, E), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb13_E.html">ePSproc: CH3I wavefn test run, orb 13 ioinzation (Iodine 3d, E xy), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb20_A1.html">ePSproc: CH3I wavefn run, orb 20 ionization (Iodine 4d, A1), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb21_E.html">ePSproc: CH3I wavefn test run, orb 21 ioinzation (Iodine 4d, E), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb23_E.html">ePSproc: CH3I wavefn test run, orb 23 ioinzation (Iodine 4d, E), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb29_A1.html">ePSproc: CH3I wavefn test run, orb 29 ioinzation (sigma bonding, A1), 1 - 60 eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CH3I_1-60eV/CH3I_1-60eV_orb30_E.html">ePSproc: CH3I wavefn test run, orb 30 ioinzation (pi anti-bonding), 1 - 60 eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">DABCO</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DABCO/DABCO_0.01-5.01eV_orb31_A1P.html">ePSproc: DABCO wavefn run, HOMO ionization (orb 31 A1P), 0.05 - 5.01eV high res</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DABCO/DABCO_0.5-10.5eV_orb31_A1P.html">ePSproc: DABCO, HOMO ioinzation (orb 31 A1P), 0.5 - 10.5eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DABCO/DABCO_1-50.0eV_orb30_A2PP.html">ePSproc: DABCO, HOMO-1 ionization (orb 30, A2PP), 1 - 50eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DABCO/DABCO_1-50.0eV_orb31_A1P.html">ePSproc: DABCO, HOMO ionization (orb 31, A1P), 1 - 50eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">XeF2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../XeF2/xef2_1.0-60.1eV_orb12_A1G.html">ePSproc: xef2 wavefn run, orb 12 ioinzation (Iodine 3d, A1G/SG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XeF2/xef2_1.0-60.1eV_orb13_E1G.html">ePSproc: xef2 wavefn run, orb 13 ioinzation (Iodine 3d, E1G/PG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XeF2/xef2_1.0-60.1eV_orb15_E2G.html">ePSproc: xef2 wavefn run, orb 15 ioinzation (Iodine 3d, E2G/DG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XeF2/xef2_1.0-60.1eV_orb21_A1G.html">ePSproc: xef2 wavefn test run, orb 21 ioinzation (Iodine 4d, A1G/SG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XeF2/xef2_1.0-60.1eV_orb22_E1G.html">ePSproc: xef2 wavefn test run, orb 22 ioinzation (Iodine 4d, E1G/PG), 1-60eV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../XeF2/xef2_1.0-60.1eV_orb24_E2G.html">ePSproc: xef2 wavefn test run, orb 24 ioinzation (Iodine 4d, E2G/DG), 1-60eV</a></li>
+</ul>
+<p class="caption"><span class="caption-text">XeF2-preliminary</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="XeF2_highRes_wf.orb21_A1G.html">XeF2 (4d sigma, orb21 A1G/SG), 1-350eV Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2_highRes_wf.orb22_E1G.html">XeF2 (4d pi, orb22-23 E1G/PG), 1-350eV Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XeF2_highRes_wf.orb24_E2G.html">XeF2 (4d delta, orb24-25, E2G/DG), 1-350eV Preliminary</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">XeF2 1 - 300eV Multi-orb processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Load-data">Load data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Job-details">Job details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Plot-ePS-GetCro-results---X-sections-and-Betas---Eke-scale">Plot ePS GetCro results - X-sections and Betas - Eke scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Plot-ePS-GetCro-results---X-sections-and-Betas---photon-energy">Plot ePS GetCro results - X-sections and Betas - photon energy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Comparison-over-orbs">Comparison over orbs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Comparison-with-expt.">Comparison with expt.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Matrix-elements">Matrix elements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">aniline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../aniline/aniline_wf_0.1-10.1eV_orb23_B1.html">ePSproc: Aniline Orb 23 (B1) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aniline/aniline_wf_0.1-10.1eV_orb24_A2.html">ePSproc: Aniline Orb 24 (A2) ionization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aniline/aniline_wf_0.1-10.1eV_orb33_A2.html">ePSproc: Aniline Orb 33 (A2) ionization</a></li>
+</ul>
+<p class="caption"><span class="caption-text">naphthalene-preliminary</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb33-45_S1.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb34.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb34-42_S1.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naphthalene-preliminary/naphthalene_wf_1.0-30.1eV_orb34-45_S2.html">ePSproc: auto-gen template development, Jupyter-runner version TIDY</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ePSdata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>XeF2 1 - 300eV Multi-orb processing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/XeF2-preliminary/XeF2_multi-orb_comparisons_270320-dist.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">This page was auto-generated from a Jupyter notebook: <a class="reference external" href="https://github.com/phockett/ePSdata/blob/master/source/XeF2-preliminary/XeF2_multi-orb_comparisons_270320-dist.ipynb">XeF2-preliminary/XeF2_multi-orb_comparisons_270320-dist</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><ul>
+<li><p><a class="reference external" href="https://phockett.github.io/ePSdata/about.html">About ePSdata</a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference external" href="#Cite-this-dataset">Cite this dataset</a>.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>Problems?  Please raise <a class="reference external" href="https://github.com/phockett/ePSdata/issues/new/choose">any issues on Github</a>.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="XeF2-1---300eV-Multi-orb-processing">
+<h1>XeF2 1 - 300eV Multi-orb processing<a class="headerlink" href="#XeF2-1---300eV-Multi-orb-processing" title="Permalink to this headline">¶</a></h1>
+<p>27/03/20</p>
+<p>Running manually on AntonJr, ePSprc-v1.2 env.</p>
+<p>Code adapted from recent multi-E chuncked job notebooks.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">!</span>hostname
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+AntonJr
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">!</span>conda env list
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+# conda environments:
+#
+base                     /home/paul/anaconda3
+ePSproc-v1.2          *  /home/paul/anaconda3/envs/ePSproc-v1.2
+epsproc                  /home/paul/anaconda3/envs/epsproc
+fibre-sim                /home/paul/anaconda3/envs/fibre-sim
+frogDAQ                  /home/paul/anaconda3/envs/frogDAQ
+qChem                    /home/paul/anaconda3/envs/qChem
+seabreeze                /home/paul/anaconda3/envs/seabreeze
+
+</pre></div></div>
+</div>
+<div class="section" id="Setup">
+<h2>Setup<a class="headerlink" href="#Setup" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">epsproc</span> <span class="k">as</span> <span class="nn">ep</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+<span class="n">timeString</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+* pyevtk not found, VTK export not available.
+* plotly not found, plotly plots not available.
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Optional - set seaborn for plot styling</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;paper&quot;</span><span class="p">)</span>  <span class="c1"># &quot;paper&quot;, &quot;talk&quot;, &quot;poster&quot;, sets relative scale of elements</span>
+                        <span class="c1"># https://seaborn.pydata.org/tutorial/aesthetics.html</span>
+<span class="c1"># sns.set(rc={&#39;figure.figsize&#39;:(11.7,8.27)})  # Set figure size explicitly (inch)</span>
+                        <span class="c1"># https://stackoverflow.com/questions/31594549/how-do-i-change-the-figure-size-for-a-seaborn-plot</span>
+                        <span class="c1"># Wraps Matplotlib rcParams, https://matplotlib.org/tutorials/introductory/customizing.html</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">:(</span><span class="mi">120</span><span class="p">)})</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>  <span class="c1"># For addtional plotting functionality</span>
+<span class="c1"># import bokeh</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Load-data">
+<h2>Load data<a class="headerlink" href="#Load-data" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Set/check working dir</span>
+<span class="n">workingDir</span> <span class="o">=</span> <span class="o">!</span>pwd
+<span class="nb">print</span><span class="p">(</span><span class="n">workingDir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Select orbs via subdirs</span>
+<span class="n">orbdirs</span> <span class="o">=</span> <span class="o">!</span>ls -d *orb2*/
+<span class="nb">print</span><span class="p">(</span><span class="n">orbdirs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;orb21_A1G/&#39;, &#39;orb22_E1G/&#39;, &#39;orb24_E2G/&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">dataSets</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Set dict to hold all data for the moment.</span>
+
+<span class="k">for</span> <span class="n">dirScan</span> <span class="ow">in</span> <span class="n">orbdirs</span><span class="p">:</span>
+    <span class="n">dataPath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">workingDir</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dirScan</span><span class="p">)</span>
+
+    <span class="c1"># For dir scan</span>
+    <span class="n">dataSetXS</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">readMatEle</span><span class="p">(</span><span class="n">fileBase</span> <span class="o">=</span> <span class="n">dataPath</span><span class="p">,</span> <span class="n">recordType</span> <span class="o">=</span> <span class="s1">&#39;CrossSection&#39;</span><span class="p">)</span>  <span class="c1"># Set for XS + betas only</span>
+    <span class="n">dataSetMatE</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">readMatEle</span><span class="p">(</span><span class="n">fileBase</span> <span class="o">=</span> <span class="n">dataPath</span><span class="p">,</span> <span class="n">recordType</span> <span class="o">=</span> <span class="s1">&#39;DumpIdy&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Stack multi-E Xarrays into single array.</span>
+    <span class="c1"># Keep results as list for compatibility with rest of code (otherwise will slice Xarray)</span>
+    <span class="n">dataXS</span> <span class="o">=</span> <span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">combine_nested</span><span class="p">(</span><span class="n">dataSetXS</span><span class="p">,</span> <span class="n">concat_dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Eke&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s1">&#39;Eke&#39;</span><span class="p">)]</span>
+    <span class="n">dataMatE</span> <span class="o">=</span> <span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">combine_nested</span><span class="p">(</span><span class="n">dataSetMatE</span><span class="p">,</span> <span class="n">concat_dim</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Eke&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s1">&#39;Eke&#39;</span><span class="p">)]</span>
+
+    <span class="c1"># Set job info from first datafile of each set (orbital)</span>
+    <span class="n">dataFile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">dataXS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;fileBase&#39;</span><span class="p">],</span> <span class="n">dataXS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">])</span>
+    <span class="n">dataXS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;jobInfo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">headerFileParse</span><span class="p">(</span><span class="n">dataFile</span><span class="p">)</span>
+    <span class="n">dataXS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;molInfo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">molInfoParse</span><span class="p">(</span><span class="n">dataFile</span><span class="p">)</span>
+
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">dirScan</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">dirScan</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataXS</span>
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">dirScan</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataMatE</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+*** ePSproc readMatEle(): scanning files for CrossSection segments.
+
+*** Scanning dir
+/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G
+Found 20 .out file(s)
+
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E3.0_10.0_143.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E2.0_10.0_142.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E10.0_10.0_150.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E4.0_10.0_144.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E156.0_10.0_296.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E8.0_10.0_148.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E157.0_10.0_297.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E159.0_10.0_299.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E155.0_10.0_295.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E151.0_10.0_291.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E7.0_10.0_147.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E160.0_10.0_300.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E1.0_10.0_141.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E9.0_10.0_149.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E6.0_10.0_146.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E5.0_10.0_145.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E158.0_10.0_298.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E153.0_10.0_293.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E154.0_10.0_294.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E152.0_10.0_292.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 3 CrossSection segments.
+Found 3 CrossSection segments (sets of results).
+Processed 3 sets of CrossSection file segments, (0 blank)
+*** ePSproc readMatEle(): scanning files for DumpIdy segments.
+
+*** Scanning dir
+/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G
+Found 20 .out file(s)
+
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E3.0_10.0_143.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E2.0_10.0_142.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E10.0_10.0_150.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E4.0_10.0_144.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E156.0_10.0_296.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E8.0_10.0_148.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E157.0_10.0_297.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E159.0_10.0_299.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E155.0_10.0_295.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E151.0_10.0_291.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E7.0_10.0_147.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E160.0_10.0_300.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E1.0_10.0_141.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E9.0_10.0_149.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E6.0_10.0_146.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E5.0_10.0_145.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E158.0_10.0_298.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E153.0_10.0_293.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E154.0_10.0_294.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb21_A1G/XeF2_highRes_wf.orb21_A1G_E152.0_10.0_292.0eV.inp.out
+Expecting 15 energy points.
+Expecting 2 symmetries.
+Scanning CrossSection segments.
+Expecting 30 DumpIdy segments.
+Found 30 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 30 sets of DumpIdy file segments, (0 blank)
+*** Job info from file header.
+
+ ePS XeF2_2020, batch XeF2_highRes_wf, orbital orb21_A1G
+ XeF2 wavefn run, orb 21 ionization (Xe 4d, A1G/SG), sph grid. Inputs based on original 2019 calcs, now with chunking for higher E resolution.
+ E=3.0:10.0:143.0 (15 points)
+
+
+*** Found orbitals
+1   1 Ene =   -1276.2548 Spin =Alpha Occup =   2.000000
+2   2 Ene =    -202.4761 Spin =Alpha Occup =   2.000000
+3   3 Ene =    -181.5792 Spin =Alpha Occup =   2.000000
+4   4 Ene =    -181.5770 Spin =Alpha Occup =   2.000000
+5   5 Ene =    -181.5770 Spin =Alpha Occup =   2.000000
+6   6 Ene =     -43.1198 Spin =Alpha Occup =   2.000000
+7   7 Ene =     -36.1973 Spin =Alpha Occup =   2.000000
+8   8 Ene =     -36.1881 Spin =Alpha Occup =   2.000000
+9   9 Ene =     -36.1881 Spin =Alpha Occup =   2.000000
+10  10 Ene =     -26.3038 Spin =Alpha Occup =   2.000000
+11  11 Ene =     -26.3038 Spin =Alpha Occup =   2.000000
+12  12 Ene =     -25.8711 Spin =Alpha Occup =   2.000000
+13  13 Ene =     -25.8673 Spin =Alpha Occup =   2.000000
+14  14 Ene =     -25.8673 Spin =Alpha Occup =   2.000000
+15  15 Ene =     -25.8578 Spin =Alpha Occup =   2.000000
+16  16 Ene =     -25.8578 Spin =Alpha Occup =   2.000000
+17  17 Ene =      -8.5562 Spin =Alpha Occup =   2.000000
+18  18 Ene =      -6.2727 Spin =Alpha Occup =   2.000000
+19  19 Ene =      -6.2547 Spin =Alpha Occup =   2.000000
+20  20 Ene =      -6.2547 Spin =Alpha Occup =   2.000000
+21  21 Ene =      -2.8143 Spin =Alpha Occup =   2.000000
+22  22 Ene =      -2.8032 Spin =Alpha Occup =   2.000000
+23  23 Ene =      -2.8032 Spin =Alpha Occup =   2.000000
+24  24 Ene =      -2.7810 Spin =Alpha Occup =   2.000000
+25  25 Ene =      -2.7810 Spin =Alpha Occup =   2.000000
+26  26 Ene =      -1.5681 Spin =Alpha Occup =   2.000000
+27  27 Ene =      -1.5619 Spin =Alpha Occup =   2.000000
+28  28 Ene =      -1.0877 Spin =Alpha Occup =   2.000000
+29  29 Ene =      -0.7372 Spin =Alpha Occup =   2.000000
+30  30 Ene =      -0.6738 Spin =Alpha Occup =   2.000000
+31  31 Ene =      -0.6738 Spin =Alpha Occup =   2.000000
+32  32 Ene =      -0.6426 Spin =Alpha Occup =   2.000000
+33  33 Ene =      -0.6426 Spin =Alpha Occup =   2.000000
+34  34 Ene =      -0.5518 Spin =Alpha Occup =   2.000000
+35  35 Ene =      -0.4994 Spin =Alpha Occup =   2.000000
+36  36 Ene =      -0.4994 Spin =Alpha Occup =   2.000000
+
+*** Found atoms
+Z = 54 ZS = 54 r =   0.0000000000   0.0000000000   0.0000000000
+Z =  9 ZS =  9 r =   0.0000000000   0.0000000000  -1.9373220000
+Z =  9 ZS =  9 r =   0.0000000000   0.0000000000   1.9373220000
+*** ePSproc readMatEle(): scanning files for CrossSection segments.
+
+*** Scanning dir
+/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G
+Found 20 .out file(s)
+
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E151.0_10.0_291.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E158.0_10.0_298.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E4.0_10.0_144.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E154.0_10.0_294.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E156.0_10.0_296.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E159.0_10.0_299.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E8.0_10.0_148.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E153.0_10.0_293.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E3.0_10.0_143.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E2.0_10.0_142.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E5.0_10.0_145.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E160.0_10.0_300.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E152.0_10.0_292.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E9.0_10.0_149.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E1.0_10.0_141.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E6.0_10.0_146.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E157.0_10.0_297.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E7.0_10.0_147.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E10.0_10.0_150.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E155.0_10.0_295.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+*** ePSproc readMatEle(): scanning files for DumpIdy segments.
+
+*** Scanning dir
+/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G
+Found 20 .out file(s)
+
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E151.0_10.0_291.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E158.0_10.0_298.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E4.0_10.0_144.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E154.0_10.0_294.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E156.0_10.0_296.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E159.0_10.0_299.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E8.0_10.0_148.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E153.0_10.0_293.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E3.0_10.0_143.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E2.0_10.0_142.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E5.0_10.0_145.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E160.0_10.0_300.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E152.0_10.0_292.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E9.0_10.0_149.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E1.0_10.0_141.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E6.0_10.0_146.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E157.0_10.0_297.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E7.0_10.0_147.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E10.0_10.0_150.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb22_E1G/XeF2_highRes_wf.orb22_E1G_E155.0_10.0_295.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+*** Job info from file header.
+
+ ePS XeF2_2020, batch XeF2_highRes_wf, orbital orb22_E1G
+ XeF2 wavefn run, orb 22/23 ionization (Xe 4d, E1G/PG), sph grid. Inputs based on original 2019 calcs, now with chunking for higher E resolution.
+ E=151.0:10.0:291.0 (15 points)
+
+
+*** Found orbitals
+1   1 Ene =   -1276.2548 Spin =Alpha Occup =   2.000000
+2   2 Ene =    -202.4761 Spin =Alpha Occup =   2.000000
+3   3 Ene =    -181.5792 Spin =Alpha Occup =   2.000000
+4   4 Ene =    -181.5770 Spin =Alpha Occup =   2.000000
+5   5 Ene =    -181.5770 Spin =Alpha Occup =   2.000000
+6   6 Ene =     -43.1198 Spin =Alpha Occup =   2.000000
+7   7 Ene =     -36.1973 Spin =Alpha Occup =   2.000000
+8   8 Ene =     -36.1881 Spin =Alpha Occup =   2.000000
+9   9 Ene =     -36.1881 Spin =Alpha Occup =   2.000000
+10  10 Ene =     -26.3038 Spin =Alpha Occup =   2.000000
+11  11 Ene =     -26.3038 Spin =Alpha Occup =   2.000000
+12  12 Ene =     -25.8711 Spin =Alpha Occup =   2.000000
+13  13 Ene =     -25.8673 Spin =Alpha Occup =   2.000000
+14  14 Ene =     -25.8673 Spin =Alpha Occup =   2.000000
+15  15 Ene =     -25.8578 Spin =Alpha Occup =   2.000000
+16  16 Ene =     -25.8578 Spin =Alpha Occup =   2.000000
+17  17 Ene =      -8.5562 Spin =Alpha Occup =   2.000000
+18  18 Ene =      -6.2727 Spin =Alpha Occup =   2.000000
+19  19 Ene =      -6.2547 Spin =Alpha Occup =   2.000000
+20  20 Ene =      -6.2547 Spin =Alpha Occup =   2.000000
+21  21 Ene =      -2.8143 Spin =Alpha Occup =   2.000000
+22  22 Ene =      -2.8032 Spin =Alpha Occup =   2.000000
+23  23 Ene =      -2.8032 Spin =Alpha Occup =   2.000000
+24  24 Ene =      -2.7810 Spin =Alpha Occup =   2.000000
+25  25 Ene =      -2.7810 Spin =Alpha Occup =   2.000000
+26  26 Ene =      -1.5681 Spin =Alpha Occup =   2.000000
+27  27 Ene =      -1.5619 Spin =Alpha Occup =   2.000000
+28  28 Ene =      -1.0877 Spin =Alpha Occup =   2.000000
+29  29 Ene =      -0.7372 Spin =Alpha Occup =   2.000000
+30  30 Ene =      -0.6738 Spin =Alpha Occup =   2.000000
+31  31 Ene =      -0.6738 Spin =Alpha Occup =   2.000000
+32  32 Ene =      -0.6426 Spin =Alpha Occup =   2.000000
+33  33 Ene =      -0.6426 Spin =Alpha Occup =   2.000000
+34  34 Ene =      -0.5518 Spin =Alpha Occup =   2.000000
+35  35 Ene =      -0.4994 Spin =Alpha Occup =   2.000000
+36  36 Ene =      -0.4994 Spin =Alpha Occup =   2.000000
+
+*** Found atoms
+Z = 54 ZS = 54 r =   0.0000000000   0.0000000000   0.0000000000
+Z =  9 ZS =  9 r =   0.0000000000   0.0000000000  -1.9373220000
+Z =  9 ZS =  9 r =   0.0000000000   0.0000000000   1.9373220000
+*** ePSproc readMatEle(): scanning files for CrossSection segments.
+
+*** Scanning dir
+/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G
+Found 20 .out file(s)
+
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E159.0_10.0_299.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E153.0_10.0_293.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E2.0_10.0_142.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E154.0_10.0_294.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E1.0_10.0_141.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E151.0_10.0_291.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E158.0_10.0_298.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E8.0_10.0_148.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E7.0_10.0_147.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E156.0_10.0_296.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E9.0_10.0_149.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E3.0_10.0_143.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E10.0_10.0_150.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E4.0_10.0_144.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E157.0_10.0_297.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E5.0_10.0_145.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E160.0_10.0_300.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E6.0_10.0_146.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E155.0_10.0_295.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E152.0_10.0_292.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 4 CrossSection segments.
+Found 4 CrossSection segments (sets of results).
+Processed 4 sets of CrossSection file segments, (0 blank)
+*** ePSproc readMatEle(): scanning files for DumpIdy segments.
+
+*** Scanning dir
+/home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G
+Found 20 .out file(s)
+
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E159.0_10.0_299.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E153.0_10.0_293.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E2.0_10.0_142.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E154.0_10.0_294.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E1.0_10.0_141.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E151.0_10.0_291.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E158.0_10.0_298.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E8.0_10.0_148.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E7.0_10.0_147.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E156.0_10.0_296.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E9.0_10.0_149.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E3.0_10.0_143.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E10.0_10.0_150.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E4.0_10.0_144.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E157.0_10.0_297.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E5.0_10.0_145.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E160.0_10.0_300.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E6.0_10.0_146.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E155.0_10.0_295.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+
+*** Reading ePS output file:  /home/paul/ePS_stuff/XeF2_2020/XeF2_highRes_wf/orb24_E2G/XeF2_highRes_wf.orb24_E2G_E152.0_10.0_292.0eV.inp.out
+Expecting 15 energy points.
+Expecting 3 symmetries.
+Scanning CrossSection segments.
+Expecting 45 DumpIdy segments.
+Found 45 dumpIdy segments (sets of matrix elements).
+
+Processing segments to Xarrays...
+Processed 45 sets of DumpIdy file segments, (0 blank)
+*** Job info from file header.
+
+ ePS XeF2_2020, batch XeF2_highRes_wf, orbital orb24_E2G
+ XeF2 wavefn run, orb 24/25 ionization (Xe 4d, E2G/DG), sph grid. Inputs based on original 2019 calcs, now with chunking for higher E resolution.
+ E=159.0:10.0:299.0 (15 points)
+
+
+*** Found orbitals
+1   1 Ene =   -1276.2548 Spin =Alpha Occup =   2.000000
+2   2 Ene =    -202.4761 Spin =Alpha Occup =   2.000000
+3   3 Ene =    -181.5792 Spin =Alpha Occup =   2.000000
+4   4 Ene =    -181.5770 Spin =Alpha Occup =   2.000000
+5   5 Ene =    -181.5770 Spin =Alpha Occup =   2.000000
+6   6 Ene =     -43.1198 Spin =Alpha Occup =   2.000000
+7   7 Ene =     -36.1973 Spin =Alpha Occup =   2.000000
+8   8 Ene =     -36.1881 Spin =Alpha Occup =   2.000000
+9   9 Ene =     -36.1881 Spin =Alpha Occup =   2.000000
+10  10 Ene =     -26.3038 Spin =Alpha Occup =   2.000000
+11  11 Ene =     -26.3038 Spin =Alpha Occup =   2.000000
+12  12 Ene =     -25.8711 Spin =Alpha Occup =   2.000000
+13  13 Ene =     -25.8673 Spin =Alpha Occup =   2.000000
+14  14 Ene =     -25.8673 Spin =Alpha Occup =   2.000000
+15  15 Ene =     -25.8578 Spin =Alpha Occup =   2.000000
+16  16 Ene =     -25.8578 Spin =Alpha Occup =   2.000000
+17  17 Ene =      -8.5562 Spin =Alpha Occup =   2.000000
+18  18 Ene =      -6.2727 Spin =Alpha Occup =   2.000000
+19  19 Ene =      -6.2547 Spin =Alpha Occup =   2.000000
+20  20 Ene =      -6.2547 Spin =Alpha Occup =   2.000000
+21  21 Ene =      -2.8143 Spin =Alpha Occup =   2.000000
+22  22 Ene =      -2.8032 Spin =Alpha Occup =   2.000000
+23  23 Ene =      -2.8032 Spin =Alpha Occup =   2.000000
+24  24 Ene =      -2.7810 Spin =Alpha Occup =   2.000000
+25  25 Ene =      -2.7810 Spin =Alpha Occup =   2.000000
+26  26 Ene =      -1.5681 Spin =Alpha Occup =   2.000000
+27  27 Ene =      -1.5619 Spin =Alpha Occup =   2.000000
+28  28 Ene =      -1.0877 Spin =Alpha Occup =   2.000000
+29  29 Ene =      -0.7372 Spin =Alpha Occup =   2.000000
+30  30 Ene =      -0.6738 Spin =Alpha Occup =   2.000000
+31  31 Ene =      -0.6738 Spin =Alpha Occup =   2.000000
+32  32 Ene =      -0.6426 Spin =Alpha Occup =   2.000000
+33  33 Ene =      -0.6426 Spin =Alpha Occup =   2.000000
+34  34 Ene =      -0.5518 Spin =Alpha Occup =   2.000000
+35  35 Ene =      -0.4994 Spin =Alpha Occup =   2.000000
+36  36 Ene =      -0.4994 Spin =Alpha Occup =   2.000000
+
+*** Found atoms
+Z = 54 ZS = 54 r =   0.0000000000   0.0000000000   0.0000000000
+Z =  9 ZS =  9 r =   0.0000000000   0.0000000000  -1.9373220000
+Z =  9 ZS =  9 r =   0.0000000000   0.0000000000   1.9373220000
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Job-details">
+<h2>Job details<a class="headerlink" href="#Job-details" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># for key in dataSets:</span>
+<span class="c1">#     ep.jobSummary(dataSets[key][0].attrs[&#39;jobInfo&#39;], dataSets[key][0].attrs[&#39;molInfo&#39;]);</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Set orbIPs, pulled manually from above (ugh, don&#39;t ask)</span>
+<span class="n">orbIPs</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">76.58</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.27</span><span class="p">,</span> <span class="o">-</span><span class="mf">75.67</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># dataSets[&#39;orb21_A1G/&#39;][0].swap_dims({&#39;Eke&#39;:&#39;Ehv&#39;})   #[&#39;Ehv&#39;]</span>
+<span class="c1"># dataSets[&#39;orb21_A1G/&#39;][0].Ehv</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Set Ehv scale - currently incorrectly set by 1st vertical IP (12.35eV)</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataSets</span><span class="p">):</span>
+<span class="c1">#     dataSets[key][0][&#39;Ehv&#39;] -= (12.35 + orbIPs[n])</span>
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Ehv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Ehv&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mf">12.35</span> <span class="o">+</span> <span class="n">orbIPs</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Ehv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Ehv&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mf">12.35</span> <span class="o">+</span> <span class="n">orbIPs</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Plot-ePS-GetCro-results---X-sections-and-Betas---Eke-scale">
+<h2>Plot ePS GetCro results - X-sections and Betas - Eke scale<a class="headerlink" href="#Plot-ePS-GetCro-results---X-sections-and-Betas---Eke-scale" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Set plot range (Eke)</span>
+<span class="n">Erange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;SIGMA&#39;</span><span class="p">,</span> <span class="n">Eke</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Eke&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+<span class="c1">#     dataSets[key][0].sel(XC=&#39;SIGMA&#39;, Type=&#39;L&#39;).plot.line(x=&#39;Ehv&#39;)  # This only shows final plot? Somehow not setting new fig object here.</span>
+<span class="c1">#     dataSets[key][0].sel(XC=&#39;SIGMA&#39;, Type=&#39;L&#39;).swap_dims({&#39;Eke&#39;:&#39;Ehv&#39;}).plot.line(x=&#39;Ehv&#39;)  # This only shows final plot?</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_17_0.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_17_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_17_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_17_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_17_2.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_17_2.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+    <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;BETA&#39;</span><span class="p">,</span> <span class="n">Eke</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Eke&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_18_0.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_18_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_18_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_18_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_18_2.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_18_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Plot-ePS-GetCro-results---X-sections-and-Betas---photon-energy">
+<h2>Plot ePS GetCro results - X-sections and Betas - photon energy<a class="headerlink" href="#Plot-ePS-GetCro-results---X-sections-and-Betas---photon-energy" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Set plot range (Eke)</span>
+<span class="n">Erange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Swap dims for plotting</span>
+<span class="c1"># Shouldn&#39;t be necessary, but set as copy here since getting some inconsistent results with plots otherwise!</span>
+<span class="n">dataSetsHV</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">swap_dims</span><span class="p">({</span><span class="s1">&#39;Eke&#39;</span><span class="p">:</span><span class="s1">&#39;Ehv&#39;</span><span class="p">})</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataSets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">swap_dims</span><span class="p">({</span><span class="s1">&#39;Eke&#39;</span><span class="p">:</span><span class="s1">&#39;Ehv&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;SIGMA&#39;</span><span class="p">,</span> <span class="n">Ehv</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+<span class="c1">#     dataSets[key][0].swap_dims({&#39;Eke&#39;:&#39;Ehv&#39;}).sel(XC=&#39;SIGMA&#39;, Ehv=slice(Erange[0], Erange[1])).plot.line(x=&#39;Ehv&#39;, col=&#39;Type&#39;)   # This works</span>
+<span class="c1">#     dataSets[key][0].sel(XC=&#39;SIGMA&#39;, Type=&#39;L&#39;).plot.line(x=&#39;Ehv&#39;)  # This only shows final plot? Somehow not setting new fig object here.</span>
+<span class="c1">#     dataSets[key][0].sel(XC=&#39;SIGMA&#39;, Type=&#39;L&#39;).swap_dims({&#39;Eke&#39;:&#39;Ehv&#39;}).plot.line(x=&#39;Ehv&#39;)  # This only shows final plot?</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_22_0.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_22_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_22_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_22_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_22_2.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_22_2.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;BETA&#39;</span><span class="p">,</span> <span class="n">Ehv</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_23_0.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_23_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_23_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_23_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_23_2.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_23_2.png" />
+</div>
+</div>
+<div class="section" id="Comparison-over-orbs">
+<h3>Comparison over orbs<a class="headerlink" href="#Comparison-over-orbs" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Beta comparison plot over orbs</span>
+<span class="n">Erange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">]</span>
+<span class="n">lText</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataSets</span><span class="p">):</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;SIGMA&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="n">Sym</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;All&#39;</span><span class="p">,</span><span class="s1">&#39;All&#39;</span><span class="p">),</span> <span class="n">Ehv</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+    <span class="n">lText</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;fileBase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lText</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.legend.Legend at 0x7f071111ef90&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_25_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_25_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Beta comparison plot over orbs</span>
+<span class="n">Erange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">]</span>
+<span class="n">lText</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataSets</span><span class="p">):</span>
+    <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;BETA&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="n">Sym</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;All&#39;</span><span class="p">,</span><span class="s1">&#39;All&#39;</span><span class="p">),</span> <span class="n">Ehv</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+    <span class="n">lText</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;fileBase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lText</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.legend.Legend at 0x7f071063e550&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_26_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_26_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Comparison-with-expt.">
+<h2>Comparison with expt.<a class="headerlink" href="#Comparison-with-expt." title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Load experimental data</span>
+<span class="n">dataPathExpt</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">workingDir</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s1">&#39;SOLEIL_data_2020&#39;</span>
+<span class="n">dataFiles</span> <span class="o">=</span> <span class="o">!</span>dir <span class="o">{</span>dataPathExpt<span class="o">}</span>
+
+<span class="c1"># hv, pi1/2 (4d3/2), delta3/2 (4d3/2), sigma1/2 (4d5/2), pi3/2 (4d5/2), delta5/2 (4d5/2), atomic Xe 4d3/2 and atomic Xe 4d5/2</span>
+<span class="n">stateLabels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;\pi1/2 (4d3/2)&#39;</span><span class="p">,</span> <span class="s1">&#39;\delta3/2 (4d3/2)&#39;</span><span class="p">,</span> <span class="s1">&#39;\sigma1/2 (4d5/2)&#39;</span><span class="p">,</span> <span class="s1">&#39;\pi3/2 (4d5/2)&#39;</span><span class="p">,</span> <span class="s1">&#39;\delta5/2 (4d5/2)&#39;</span><span class="p">,</span> <span class="s1">&#39;atomic Xe 4d3/2&#39;</span><span class="p">,</span> <span class="s1">&#39;atomic Xe 4d5/2&#39;</span><span class="p">]</span>
+
+<span class="n">dataExpt</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dataFiles</span><span class="p">:</span>
+    <span class="n">dataIn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">dataPathExpt</span><span class="o">/</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="c1"># Convert to Xarray</span>
+    <span class="n">dataXr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">dataIn</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:],</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span><span class="s1">&#39;State&#39;</span><span class="p">),</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Ehv&#39;</span><span class="p">:</span><span class="n">dataIn</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;State&#39;</span><span class="p">:</span><span class="n">stateLabels</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">dataIn</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]})</span>
+    <span class="n">dataXr</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataPath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataPathExpt</span>
+    <span class="n">dataXr</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+    <span class="n">dataExpt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dataXr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Quick plot</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dataExpt</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">item</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_30_0.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_30_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_30_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_30_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Compare with computational results</span>
+<span class="n">Eshift</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Set shared cmap - not sure this is possible with Xarray.plot.line()?</span>
+<span class="c1"># from matplotlib import cm</span>
+<span class="c1"># cmap = cm.get_cmap(&#39;viridis&#39;, 3)</span>
+
+<span class="c1"># Beta comparison plot over orbs</span>
+<span class="n">Erange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">]</span>
+<span class="n">lText</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataSets</span><span class="p">):</span>
+    <span class="n">dataPlot</span> <span class="o">=</span> <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">dataPlot</span><span class="p">[</span><span class="s1">&#39;Ehv&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Eshift</span>
+    <span class="n">dataPlot</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;BETA&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="n">Sym</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;All&#39;</span><span class="p">,</span><span class="s1">&#39;All&#39;</span><span class="p">),</span> <span class="n">Ehv</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+    <span class="n">lText</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;fileBase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Add expt data</span>
+<span class="c1"># plt.figure()</span>
+<span class="n">dataExpt</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">lText</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">dataExpt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">State</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+
+<span class="c1"># Set legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lText</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.legend.Legend at 0x7f0706ef97d0&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_31_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_31_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Compare with computational results</span>
+<span class="n">Eshift</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="c1"># Set shared cmap - not sure this is possible with Xarray.plot.line()?</span>
+<span class="c1"># from matplotlib import cm</span>
+<span class="c1"># cmap = cm.get_cmap(&#39;viridis&#39;, 3)</span>
+
+<span class="c1"># Beta comparison plot over orbs</span>
+<span class="n">Erange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">]</span>
+<span class="n">lText</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataSets</span><span class="p">):</span>
+    <span class="n">dataPlot</span> <span class="o">=</span> <span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">dataPlot</span><span class="p">[</span><span class="s1">&#39;Ehv&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Eshift</span>
+    <span class="n">dataPlot</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">XC</span><span class="o">=</span><span class="s1">&#39;BETA&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="n">Sym</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;All&#39;</span><span class="p">,</span><span class="s1">&#39;All&#39;</span><span class="p">),</span> <span class="n">Ehv</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">Erange</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Erange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">)</span>   <span class="c1"># This works</span>
+    <span class="n">lText</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;XS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;fileBase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Add expt data</span>
+<span class="c1"># plt.figure()</span>
+<span class="n">dataExpt</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">lText</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">dataExpt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">State</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+
+<span class="c1"># Set legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lText</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.legend.Legend at 0x7f0710134e50&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_32_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_32_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Matrix-elements">
+<h2>Matrix elements<a class="headerlink" href="#Matrix-elements" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+<span class="c1">#     dataSetsHV[key].sel(XC=&#39;BETA&#39;, Ehv=slice(Erange[0], Erange[1])).plot.line(x=&#39;Ehv&#39;, col=&#39;Type&#39;)   # This works</span>
+
+<span class="c1">#     # Plot matrix elements using Xarray functionality</span>
+<span class="c1">#     daPlot = dataSet[0].sum(&#39;mu&#39;).sum(&#39;Sym&#39;).sel({&#39;Type&#39;:&#39;L&#39;}).squeeze()</span>
+<span class="c1">#     daPlot.pipe(np.abs).plot.line(x=&#39;Eke&#39;)</span>
+
+    <span class="c1"># Set sq = True to squeeze on singleton dimensions</span>
+<span class="c1">#     ep.matEleSelector(dataSetsHV[key][&#39;matE&#39;].sum(&#39;mu&#39;), thres=1e-2, sq = True, dims = &#39;Ehv&#39;).plot.line(x=&#39;Ehv&#39;, col=&#39;Sym&#39;, row=&#39;Type&#39;)</span>
+<span class="c1">#     ep.matEleSelector(dataSetsHV[key][&#39;matE&#39;].sum(&#39;mu&#39;).sum(&#39;Sym&#39;), thres=1e-2, sq = True, dims = &#39;Ehv&#39;).plot.line(x=&#39;Ehv&#39;, row=&#39;Type&#39;)</span>
+
+<span class="c1">#     daPlot = dataSetsHV[key][&#39;matE&#39;].sum(&#39;mu&#39;).sum(&#39;Sym&#39;).sel({&#39;Type&#39;:&#39;L&#39;}).squeeze()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c1"># Force new figure!</span>
+    <span class="n">daPlot</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">matEleSelector</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;Sym&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;it&#39;</span><span class="p">),</span> <span class="n">inds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Type&#39;</span><span class="p">:</span><span class="s1">&#39;L&#39;</span><span class="p">},</span> <span class="n">thres</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sq</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dims</span> <span class="o">=</span> <span class="s1">&#39;Ehv&#39;</span><span class="p">)</span>
+<span class="c1">#     daPlot.pipe(np.abs).plot.line(x=&#39;Ehv&#39;)</span>
+    <span class="n">daPlot</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;LM&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_34_0.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_34_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_34_1.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_34_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_34_2.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_34_2.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># With lmPlot</span>
+<span class="n">thres</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="c1"># Plot for each fie</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dataSets</span><span class="p">:</span>
+    <span class="c1"># Plot with sensible defaults - all dims with lmPlot()</span>
+
+    <span class="c1"># Plot only values &gt; theshold</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c1"># Force new figure.</span>
+    <span class="n">daPlot</span><span class="p">,</span> <span class="n">daPlotpd</span><span class="p">,</span> <span class="n">legendList</span><span class="p">,</span> <span class="n">gFig</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">lmPlot</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">],</span> <span class="n">xDim</span><span class="o">=</span><span class="s1">&#39;Ehv&#39;</span><span class="p">,</span> <span class="n">selDims</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Type&#39;</span><span class="p">:</span><span class="s1">&#39;L&#39;</span><span class="p">},</span> <span class="n">thres</span> <span class="o">=</span> <span class="n">thres</span><span class="p">,</span> <span class="n">thresType</span> <span class="o">=</span> <span class="s1">&#39;pc&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+    <span class="c1"># Plot phases, with unwrap</span>
+<span class="c1">#     daPlot, daPlotpd, legendList, gFig = ep.lmPlot(dataSetsHV[key][&#39;matE&#39;], thres = thres, thresType = &#39;pc&#39;, figsize = (15,10), pType=&#39;phaseUW&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:215: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Plotting data XeF2_highRes_wf.orb21_A1G_E3.0_10.0_143.0eV.inp.out, pType=a, thres=4.249411791226519, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:215: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Plotting data XeF2_highRes_wf.orb22_E1G_E151.0_10.0_291.0eV.inp.out, pType=a, thres=2.828909780457982, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/paul/anaconda3/envs/ePSproc-v1.2/lib/python3.7/site-packages/xarray/core/nputils.py:215: RuntimeWarning: All-NaN slice encountered
+  result = getattr(npmodule, name)(values, axis=axis, **kwargs)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Plotting data XeF2_highRes_wf.orb24_E2G_E159.0_10.0_299.0eV.inp.out, pType=a, thres=2.4653963431578423, with Seaborn
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Figure size 720x480 with 0 Axes&gt;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_35_7.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_35_7.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_35_9.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_35_9.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_35_11.png" src="../_images/XeF2-preliminary_XeF2_multi-orb_comparisons_270320-dist_35_11.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">dir</span><span class="p">(</span><span class="n">gFig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">dir</span><span class="p">(</span><span class="n">gFig</span><span class="o">.</span><span class="n">ax_heatmap</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">gFig</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ylabel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">g</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">snsMatMod</span><span class="o">.</span><span class="n">clustermap</span><span class="p">(</span><span class="n">daPlotpd</span><span class="p">,</span>
+          <span class="c1"># cmap=&quot;vlag&quot;, center = 0,</span>
+          <span class="c1"># Turn off the clustering</span>
+          <span class="n">row_cluster</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">col_cluster</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+          <span class="c1"># Add colored class labels</span>
+<span class="c1">#           row_colors=colors, col_colors=None, # )  # ,</span>
+          <span class="c1"># Make the plot look better when many rows/cols</span>
+          <span class="c1"># NOTE on ticklabels - pass true/false, auto, int or list for more control.</span>
+          <span class="n">linewidths</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xticklabels</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+          <span class="c1"># Some other additional, optional, args...</span>
+<span class="c1">#           figsize = figsize, cmap = cmap)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">daPlot</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ep</span><span class="o">.</span><span class="n">matEleSelector</span><span class="p">(</span><span class="n">dataSetsHV</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;matE&#39;</span><span class="p">],</span> <span class="n">thres</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">sq</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dims</span> <span class="o">=</span> <span class="s1">&#39;Ehv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="k">load_ext</span> version_information
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="k">version_information</span> epsproc, xarray
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<table><tr><th>Software</th><th>Version</th></tr><tr><td>Python</td><td>3.7.6 64bit [GCC 7.3.0]</td></tr><tr><td>IPython</td><td>7.12.0</td></tr><tr><td>OS</td><td>Linux 4.15.0 66 generic x86_64 with debian stretch sid</td></tr><tr><td>epsproc</td><td>1.2.4</td></tr><tr><td>xarray</td><td>0.15.0</td></tr><tr><td colspan='2'>Tue Mar 31 15:37:29 2020 EDT</td></tr></table></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../aniline/aniline_wf_0.1-10.1eV_orb23_B1.html" class="btn btn-neutral float-right" title="ePSproc: Aniline Orb 23 (B1) ionization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="XeF2_highRes_wf.orb24_E2G.html" class="btn btn-neutral float-left" title="XeF2 (4d delta, orb24-25, E2G/DG), 1-350eV Preliminary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Paul Hockett
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
