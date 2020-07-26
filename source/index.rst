@@ -71,6 +71,14 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
 .. toctree::
    :maxdepth: 1
+   :caption: naphthalene
+   :glob:
+
+   naphthalene/*
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: naphthalene-preliminary
    :glob:
 
