@@ -68,12 +68,14 @@ Photoionization calculation results with `ePolyScat <http://www.chem.tamu.edu/rg
 
    aniline/*
 
+
 .. toctree::
    :maxdepth: 1
    :caption: naphthalene-preliminary
    :glob:
 
    naphthalene-preliminary/*
+
 
 
 .. image:: _figs/grav_box_img23164957.jpg
