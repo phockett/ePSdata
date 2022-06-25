@@ -1,2 +1,0 @@
-Accuracy, uncertainties and errors
-==================================
